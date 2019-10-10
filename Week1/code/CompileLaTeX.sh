@@ -1,4 +1,10 @@
 #!/bin/bash
+# Author: Hovig Artinian ha819@imperial.ac.uk
+# Script: CompileLaTeX.sh
+# Desc: converts latex files to pdf
+# Arguments: 1 -> latex file
+# Date: Oct 2019
+
 pdflatex $1.tex
 pdflatex $1.tex
 bibtex $1

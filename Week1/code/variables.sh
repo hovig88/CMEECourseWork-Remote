@@ -1,4 +1,9 @@
 #!/bin/bash
+# Author: Hovig Artinian ha819@imperial.ac.uk
+# Script: variables.sh
+# Desc: using and reading variables in different ways
+# Arguments: none
+# Date: Oct 2019
 
 # Shows the use of variables
 MyVar="some string"
