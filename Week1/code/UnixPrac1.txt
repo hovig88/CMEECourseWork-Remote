@@ -1,0 +1,101 @@
+## THIS TEXT FILE CONTAINS THE ANSWERS FOR THE FASTA EXERCISE ##
+
+## 1 - COUNTING NUMBER OF LINES IN EACH FASTA FILE ##
+
+printf "1. The number of lines in each fasta file is as follows:\n" && 
+wc -l ../data/fasta/*.fasta
+
+#########################################################
+#   COMMENTS:
+#   ---------
+#   * \n prints a new line
+#   * the -l flag counts the number of lines of a file
+#########################################################
+
+## 2 - PRINTING THE SEQUENCE OF THE E.COLI GENOME ##
+
+printf "\n2. The sequence of the E.coli genome is: \n" && 
+tail -n +2 ../data/fasta/E.coli.fasta
+
+#########################################################
+#   COMMENTS:
+#   ---------
+#   * the -n +2 flag outputs the content of the 
+#     file starting from the second line
+#########################################################
+
+## 3 - COUNTING THE SEQUENCE LENGTH OF THE E.COLI GENOME ##
+
+printf "\n3. The length of the E.coli genome sequence is " &&
+tail -n +2 ../data/fasta/E.coli.fasta | tr -d '\n' | wc -m
+
+#########################################################
+#   COMMENTS:
+#   ---------
+#   * first part similar to command #2
+#   * the -m flag prints the number of characters. 
+#     However, this flag also takes into account 
+#     trailing newlines. 
+#   * the -d '\n' flag deals with this issue by 
+#     deleting those newlines
+#
+#   ADDITIONAL COMMENT:
+#   -------------------
+#   Just to mention that there are two extra letters 
+#   (R and Y) in the sequence. The length of the 
+#   whole sequence is 4686137, but 4686135 if we 
+#   exclude those two extra letters. 
+#########################################################
+
+## 4 - COUNTING THE MATCHES OF "ATGC" IN THE E.COLI GENOME ##
+
+printf "\n4. The number of matches of the sequence 'ATGC' in the E.coli genome is " && 
+tail -n +2 ../data/fasta/E.coli.fasta | tr -d '\n' | grep -o ATGC | wc -l
+
+#########################################################
+#   COMMENTS:
+#   ---------
+#   * the -o flag prints all the matched parts in the 
+#     file, each on a separate line. This way we can 
+#     figure out the number of occurences of the 
+#     pattern by using the wc -l command
+#   * without using the -o flag, we would only be 
+#     counting the lines that contain the matched
+#     pattern. So, if there is more than one occurence 
+#     of the pattern in one line, we would not be able 
+#     to detect it.
+#########################################################
+
+## 5 - COMPUTING THE AT/GC RATIO IN THE E.COLI GENOME ##
+
+printf "\n5. The AT/GC ratio in the E.coli genome is " &&
+base_A=$(grep -o A ../data/fasta/E.coli.fasta | wc -l) && 
+base_T=$(grep -o T ../data/fasta/E.coli.fasta | wc -l) && 
+base_G=$(grep -o G ../data/fasta/E.coli.fasta | wc -l) && 
+base_C=$(grep -o C ../data/fasta/E.coli.fasta | wc -l) &&
+printf "%.3f\n" "$(bc -l <<< "($base_A+$base_T) / ($base_G+$base_C)")"
+
+#########################################################
+#   COMMENTS:
+#   ---------
+#   * each variable computes the number of occurences 
+#     of one of the four bases in the sequence
+#   * the bc command serves as a calculator for bash. 
+#     This is where we divide the total number of A-s 
+#     and T-s with the total number of G-s and C-s to 
+#     obtain the AT/GC ratio
+#   * the -l flag assumes 20 digits after the decimal 
+#     point by default
+#   * the printf command was included for the purpose of 
+#     producing the output in a proper format:
+#       - % takes anything before the digit
+#       - 3f takes 3 digits after the decimal point
+#       - \n inserts a new line
+#
+#   ADDITIONAL COMMENT:
+#   -------------------
+#   I tried running this command without assigning 
+#   variables so that it becomes a one-liner, but it was 
+#   ~3.7x more time-consuming. Therefore, I decided to 
+#   stick with this one.
+##########################################################
