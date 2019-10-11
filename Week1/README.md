@@ -52,4 +52,4 @@ None
 
 ## Acknowledgements
 
-I would like to thank Master Jedi Samraat for accepting me as his young padawan!
+I would like to thank Master Jedi Samraat Pawar for accepting me as his young padawan!
