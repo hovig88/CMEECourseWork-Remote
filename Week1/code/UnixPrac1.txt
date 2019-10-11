@@ -86,8 +86,9 @@ printf "%.3f\n" "$(bc -l <<< "($base_A+$base_T) / ($base_G+$base_C)")"
 #     obtain the AT/GC ratio
 #   * the -l flag assumes 20 digits after the decimal 
 #     point by default
-#   * the printf command was included for the purpose of 
-#     producing the output in a proper format:
+#   * the second printf command was included for the 
+#     purpose of producing the output in a proper 
+#     format:
 #       - % takes anything before the digit
 #       - 3f takes 3 digits after the decimal point
 #       - \n inserts a new line

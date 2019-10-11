@@ -41,7 +41,9 @@
 ## Authors
 
 Jedi (in training): Hovig Artinian
+
 Academic email: ha819@ic.ac.uk
+
 Personal email: artinianhovig@gmail.com
 
 ## License
