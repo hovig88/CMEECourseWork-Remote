@@ -1,8 +1,8 @@
 # Week 1: Course Induction & CMEE Bootcamp Intro
 
-* The first week was an induction to the CMEE Masters course and an introduction to the Unix environment, shell scripting, version control with git, and typesetting with LaTeX.
+* The first week was an induction to the CMEE Masters program and an introduction to the Unix environment, shell scripting, version control with git, and typesetting with LaTeX.
 
-* The **Week1** directory includes a .gitignore file and the following subdirectories: *Code*, *Data*, *Results*, and *Sandbox*.
+* The **Week1** directory includes a `.gitignore` file and the following subdirectories: *Code*, *Data*, *Results*, and *Sandbox*.
     - Code - includes all the scripts and commands related to the Week 1 practicals/assignments
     - Data - includes the data needed as inputs for some of the scripts/commands
     - Results - essentially an empty directory, but includes an empty `.keep` file (since completely empty directories cannnot be pushed to git)
@@ -52,4 +52,4 @@ None
 
 ## Acknowledgements
 
-I would like to thank Master Jedi Samraat Pawar for accepting me as his young padawan!
+First week of Jedi training completed.
