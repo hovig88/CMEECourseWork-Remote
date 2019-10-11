@@ -11,6 +11,7 @@
 This directory includes scripts/commands and data related to the first week's practicals/assignments. 
 
 In the first week, the following sections were covered:
+
     - Unix
     - Shell scripting
     - Version control with Git
