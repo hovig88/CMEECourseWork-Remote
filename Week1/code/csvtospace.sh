@@ -15,3 +15,4 @@ for file in $1.txt
 do
     mv "$file" "$(basename "$file" .csv.txt).txt" # fixing the file extension from .csv.txt to just .txt
 done
+
