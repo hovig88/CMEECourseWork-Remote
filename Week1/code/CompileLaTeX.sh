@@ -22,3 +22,5 @@ rm -f *.nav
 rm -f *.out
 rm -f *.snm
 rm -f *.toc
+
+# -f flag ignores nonexistent files and arguments
