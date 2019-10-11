@@ -10,4 +10,11 @@
 echo "Creating a comma delimited version of $1 ..."
 cat $1 | tr -s "\t" "," >> $1.csv
 echo "Done!"
+
+for file in $1.csv
+do
+    mv "$file" "$(basename "$file" .txt.csv).csv" # fixing the file extension from .txt.csv to just .csv
+done
+
 exit
+

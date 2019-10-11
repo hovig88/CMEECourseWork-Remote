@@ -10,3 +10,4 @@ for f in *.tif;
 		echo "Converting $f";
 		convert "$f" "$(basename "$f" .tif).jpg";
 	done
+
