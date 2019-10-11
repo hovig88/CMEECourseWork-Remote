@@ -52,4 +52,4 @@ None
 
 ## Acknowledgements
 
-First week of Jedi training completed.
+First week of Jedi training completed!
