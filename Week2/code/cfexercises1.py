@@ -23,7 +23,7 @@ def foo_2(x, y):
     return y
 
 def foo_3(x, y, z):
-    """This function takes three input numbers and reassigns arguments 
+    """This function takes three input numbers and flips their values 
     when the one on the left is higher than the one on the right"""
     if x > y:
         tmp = y
