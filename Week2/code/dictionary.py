@@ -29,3 +29,7 @@ for row in taxa:
         for key in taxa_dic.keys():
                 if key == row[1]:
                         taxa_dic[key].append(row[0])
+
+print(taxa_dic)
+# from pprint import pprint
+# pprint(taxa_dic)

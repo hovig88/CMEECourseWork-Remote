@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-"""Some functions showing different usage of numerical operations"""
+"""Some functions showing different usage of conditionals with numerical operations"""
 
 __author__ = 'Hovig Artinian (ha819@imperial.ac.uk)'
 __version__ = '0.0.1'
@@ -23,7 +23,7 @@ def foo_2(x, y):
     return y
 
 def foo_3(x, y, z):
-    """This function takes three input numbers and flips their values 
+    """This function takes three input numbers and switches their values 
     when the one on the left is higher than the one on the right"""
     if x > y:
         tmp = y
@@ -36,8 +36,8 @@ def foo_3(x, y, z):
     return [x, y, z]
 
 def foo_4(x):
-    """This function takes an input number and computes the 
-    factorial by multiplying consecutive numbers in an increasing order"""
+    """This function takes an input number and computes the factorial 
+    by multiplying consecutive numbers in an increasing order"""
     result = 1
     for i in range(1, x + 1):
         result = result * i
@@ -50,8 +50,8 @@ def foo_5(x): # a recursive function that calculates the factorial of x
     return x * foo_5(x - 1)
 
 def foo_6(x): # Calculate the factorial of x in a different way
-    """This function takes an input number and computes the 
-    factorial by multiplying consecutive numbers in a decreasing order"""
+    """This function takes an input number and computes the factorial 
+    by multiplying consecutive numbers in a decreasing order"""
     facto = 1
     while x>= 1:
         facto = facto * x
@@ -59,12 +59,18 @@ def foo_6(x): # Calculate the factorial of x in a different way
     return facto
 
 def main(argv):
-    print(foo_1(1))
-    print(foo_2(33, 23))
-    print(foo_3(120, 5, 2))
-    print(foo_4(4))
-    print(foo_5(3))
-    print(foo_6(2))
+    print("foo_1 input: 2")
+    print("foo_1 result: " + str(foo_1(2)) + "\n")
+    print("foo_2 inputs: 33, 23")
+    print("foo_2 result: " + str(foo_2(33, 23)) + "\n")
+    print("foo_3 input: [120, 5, 2]")
+    print("foo_3 result: " + str(foo_3(120, 5, 2)) + "\n")
+    print("foo_4 input: 4")
+    print("foo_4 result: " + str(foo_4(4)) + "\n")
+    print("foo_5 input: 3")
+    print("foo_5 result: " + str(foo_5(3)) + "\n")
+    print("foo_6 input: 5")
+    print("foo_6 result: " + str(foo_6(5)))
     return 0
 
 if (__name__ == "__main__"):

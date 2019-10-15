@@ -2,11 +2,11 @@
 
 * The first week was an induction to the CMEE Masters program and an introduction to the Unix environment, shell scripting, version control with git, and typesetting with LaTeX.
 
-* The **Week1** directory includes a `.gitignore` file and the following subdirectories: *Code*, *Data*, *Results*, and *Sandbox*.
-    - Code - includes all the scripts and commands related to the Week 1 practicals/assignments
-    - Data - includes the data needed as inputs for some of the scripts/commands
-    - Results - essentially an empty directory, but includes an empty `.keep` file (since completely empty directories cannnot be pushed to git)
-    - Sandbox - similar to a recycle bin; disposing files that are not needed for assessment, but might still be useful for the author if and when needed
+* The **Week1** directory includes the following subdirectories: *code*, *data*, *results*, and *sandbox*.
+    - code - includes all the Week 1 practicals/assignments and in-class scripts
+    - data - includes the data needed as inputs for some of the scripts/commands
+    - results - essentially an empty directory, but includes a .gitignore file (since completely empty directories cannnot be pushed to git)
+    - sandbox - similar to a recycle bin; disposing files that are not needed for assessment, but might still be useful for the author if and when needed
 
 ## Contents
 

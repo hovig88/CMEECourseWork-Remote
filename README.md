@@ -1,6 +1,6 @@
 # Computational Methods in Ecology and Evolution (CMEE) Masters Program
 
-* This repository includes scripts and programs for weekly practicals/assignments required for the partial completion of the CMEE Masters program.
+* This repository includes weekly practicals/assignments and in-class scripts required for the partial completion of the CMEE Masters program.
 
 * The **CMEECourseWork-Remote** directory contains a `.gitignore` file and subdirectories named as `Week1`, `Week2`,...etc. This will be updated weekly as the course progresses. 
 
@@ -8,7 +8,7 @@
 
 ### Week 1
 
-This directory includes scripts/commands and data related to the first week's practicals/assignments. 
+This directory includes code and data related to the first week's practicals/assignments and in-class scripts. 
 
 In the first week, the following sections were covered:
 
