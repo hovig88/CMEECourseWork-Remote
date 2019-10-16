@@ -17,6 +17,14 @@ In the first week, the following sections were covered:
 * Version control with Git
 * Scientific documents with LaTeX
 
+### Week 2
+
+This directory includes code and data related to the second week's practicals/assignments and in-class scripts. 
+
+In the second week, the following sections were covered:
+
+* Biological computing in Python I
+
 ## Authors
 
 Jedi (in training): Hovig Artinian

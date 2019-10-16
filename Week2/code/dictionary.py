@@ -1,3 +1,12 @@
+#!/usr/bin/env python3
+
+"""This Python script populates a dictionary by mapping order names to sets of taxa"""
+
+__appname__ = 'dictionary.py'
+__author__ = 'Hovig Artinian (ha819@imperial.ac.uk)'
+__version__ = '0.0.1'
+__license__ = 'None'
+
 taxa = [ ('Myotis lucifugus','Chiroptera'),
          ('Gerbillus henleyi','Rodentia',),
          ('Peromyscus crinitus', 'Rodentia'),
@@ -10,15 +19,6 @@ taxa = [ ('Myotis lucifugus','Chiroptera'),
          ('Canis lupus', 'Carnivora'),
         ]
 
-# Write a short python script to populate a dictionary called taxa_dic 
-# derived from  taxa so that it maps order names to sets of taxa. 
-# E.g. 'Chiroptera' : set(['Myotis lucifugus']) etc. 
-
-#'Afrosoricida' : 'Microgale dobsoni', 'Microgale talazaci'
-#'Carnivora' : 'Lyacon pictus' , 'Arctocephalus gazella', 'Canis lupus'
-#'Chiroptera' : 'Myotis lucifugus'
-#'Rodentia' : 'Gerbillus henleyi', 'Peromyscus crinitus', 'Mus domesticus', 'Cleithrionomys rutilus'
-
 taxa_dic={}
 x = 0
 for row in taxa:
@@ -30,6 +30,6 @@ for row in taxa:
                 if key == row[1]:
                         taxa_dic[key].append(row[0])
 
-print(taxa_dic)
-# from pprint import pprint
-# pprint(taxa_dic)
+print("Order Names : Taxa")
+for key,val in taxa_dic.items():
+        print(key, ": ", val)

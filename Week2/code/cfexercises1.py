@@ -2,8 +2,10 @@
 
 """Some functions showing different usage of conditionals with numerical operations"""
 
+__appname__ = 'cfexercises1.py'
 __author__ = 'Hovig Artinian (ha819@imperial.ac.uk)'
 __version__ = '0.0.1'
+__license__ = 'None'
 
 ## imports ##
 import sys # module to interface our program with the operating system
@@ -59,18 +61,18 @@ def foo_6(x): # Calculate the factorial of x in a different way
     return facto
 
 def main(argv):
-    print("foo_1 input: 2")
-    print("foo_1 result: " + str(foo_1(2)) + "\n")
-    print("foo_2 inputs: 33, 23")
-    print("foo_2 result: " + str(foo_2(33, 23)) + "\n")
-    print("foo_3 input: [120, 5, 2]")
-    print("foo_3 result: " + str(foo_3(120, 5, 2)) + "\n")
-    print("foo_4 input: 4")
-    print("foo_4 result: " + str(foo_4(4)) + "\n")
-    print("foo_5 input: 3")
-    print("foo_5 result: " + str(foo_5(3)) + "\n")
-    print("foo_6 input: 5")
-    print("foo_6 result: " + str(foo_6(5)))
+    print("foo_1 test input: 2")
+    print("foo_1 test result: " + str(foo_1(2)) + "\n")
+    print("foo_2 test inputs: 33, 23")
+    print("foo_2 test result: " + str(foo_2(33, 23)) + "\n")
+    print("foo_3 test input: [120, 5, 2]")
+    print("foo_3 test result: " + str(foo_3(120, 5, 2)) + "\n")
+    print("foo_4 test input: 4")
+    print("foo_4 test result: " + str(foo_4(4)) + "\n")
+    print("foo_5 test input: 3")
+    print("foo_5 test result: " + str(foo_5(3)) + "\n")
+    print("foo_6 test input: 5")
+    print("foo_6 test result: " + str(foo_6(5)))
     return 0
 
 if (__name__ == "__main__"):

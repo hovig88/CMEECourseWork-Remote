@@ -1,3 +1,13 @@
+#!/usr/bin/env python3
+
+"""This Python script creates two different lists of month,rainfall tuples where the amount of rain was greater 
+than 100mm and less than 50mm, respectively, using list comprehensions, as well as conventional for loops."""
+
+__appname__ = 'lc2.py'
+__author__ = 'Hovig Artinian (ha819@imperial.ac.uk)'
+__version__ = '0.0.1'
+__license__ = 'None'
+
 # Average UK Rainfall (mm) for 1910 by month
 # http://www.metoffice.gov.uk/climate/uk/datasets
 rainfall = (('JAN',111.4),
@@ -14,32 +24,34 @@ rainfall = (('JAN',111.4),
             ('DEC',142.2),
            )
 
-# (1) Use a list comprehension to create a list of month,rainfall tuples where
-# the amount of rain was greater than 100 mm.
- 
-# (2) Use a list comprehension to create a list of just month names where the
-# amount of rain was less than 50 mm. 
-
-# (3) Now do (1) and (2) using conventional loops (you can choose to do 
-# this before 1 and 2 !). 
-
-#(1)
+#(1) > 100mm
 greater_than_100 = [i for i in rainfall if i[1] > 100]
-print(greater_than_100)
-
-#(2)
+#(2) < 50mm
 less_than_50 = [i[0] for i in rainfall if i[1] < 50]
-print(less_than_50)
 
-#(3)
+print("Using list comprehensions:")
+print("Greater than 100:")
+print(greater_than_100)
+print("Less than 100:")
+print(less_than_50)
+print("")
+
+#(3) using for loops
 greater_than_100 = []
 for i in rainfall:
     if i[1] > 100:
         greater_than_100.append(i)
-print(greater_than_100)
 
 less_than_50 = []
 for i in rainfall:
     if i[1] < 50:
         less_than_50.append(i[0])
+
+print("Using conventional for loops:")
+print("Greater than 100:")
+print(greater_than_100)
+print("Less than 100:")
 print(less_than_50)
+print("")
+
+print("We get the same output as expected!")
