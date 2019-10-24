@@ -25,6 +25,14 @@ In the second week, the following sections were covered:
 
 * Biological computing in Python I
 
+### Week 3
+
+This directory includes code and data related to the third week's practicals/assignments and in-class scripts. 
+
+In the third week, the following sections were covered:
+
+* Biological Computing in R
+
 ## Authors
 
 Jedi (in training): Hovig Artinian
