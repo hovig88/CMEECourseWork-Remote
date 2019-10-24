@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+
+\usepackage[top=10mm,bottom=25mm,left = 25mm , right = 25mm]{geometry}
+\usepackage{pdfpages}
+\usepackage{grffile}
+\graphicspath{{../results/}}
+\usepackage{caption}
+\captionsetup{font=footnotesize}
+
+\title{Autocorrelation in Weather}
+
+\author{Hovig Artinian}
+
+\date{October 24, 2019}
+
+\begin{document}
+    \maketitle
+  
+    \section{Aim}
+        This practical deals with a dataset that includes temperature data in Key West, Florida during the 20th century.
+        The aim is to prove whether or not there is a significant correlation between temperatures of successive years, across years.
+
+    \section{Results}
+    Upon plotting the values of the temperature as a function of years, we get the following output:
+    \begin{figure}[h]
+    \includegraphics[width = \linewidth, scale = 0.75]{Temp_Plot.pdf}
+    \centering
+    \caption[scale = 0.5]{Times series of temperature. The circles represent data values. The connecting lines were included to better visualize the trend in the time series.}
+    \label{plot}
+    \end{figure}
+    
+    Figure \ref{plot}\ shows no significant data, such as seasonal patterns or cyclic movements. There are no outliers and sudden shifts as well. The only observation worth mentioning is the increasing trend of the curve, which may be the result of climate change.
+
+    The correlation coefficient between successive years was found to be 0.326. This value will be useful for analysis later.
+
+    Next, we randomly permute the time series (10000 times!) and recalculate the correlation coefficient for each of these random permutations.\\
+    
+    Figure \ref{hist}\ below plots a histogram of the temperature correlations:
+    \begin{figure}[h]
+    \includegraphics[scale = 0.7]{Temp_Hist.pdf}
+    \centering
+    \caption{Histogram of temperature correlation. The red dashed line marks the location of the correlation coefficient of the real original dataset}
+    \label{hist}
+    \end{figure}
+
+    A clear normal distribution is observed, with the mean almost close to zero.
+
+    \section{Conclusion}
+    \begin{itemize}
+        \item The low value of the correlation coefficient indicates a weak correlation of temperatures betweens successive years.
+        \item The p-value, which changes due to randomization, always seems to be very low.
+        \item In Figure 2, the mean (= 0) of the correlation coefficients of the randomized permutations is far from the actual correlation value (= 0.326), which implies that the probability of random correlation of these temperatures is very low.
+    \end{itemize}
+
+    Based on the values of the original correlation coefficient and the p-value, there is a significantly weak correlation in temperature, which is reinforced by Figure 2.
+\end{document}

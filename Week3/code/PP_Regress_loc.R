@@ -14,3 +14,5 @@ table = ddply(subDF, .(Feeding.type.X.Predator.lifestage.X.Location), summarize,
               r.squared = summary(lm(log10(Predator.mass)~log10(Prey.mass)))$r.squared,
               f.statistic = as.numeric(glance(lm(log10(Predator.mass)~log10(Prey.mass)))[4]),
               p.value = summary(lm(log10(Predator.mass)~log10(Prey.mass)))$coefficients[8])
+
+write.csv(table, "../results/PP_Regress_loc_Results.csv", row.names = FALSE)
