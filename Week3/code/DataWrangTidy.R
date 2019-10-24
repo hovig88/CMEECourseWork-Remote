@@ -1,11 +1,13 @@
+#!/usr/bin/env R
+
 ################################################################
 ################## Wrangling the Pound Hill Dataset ############
 ################################################################
 
 ############### import packages ###############
 
-require(dplyr)
-require(tidyr)
+require(dplyr, warn.conflicts = FALSE, quietly = TRUE)
+require(tidyr, warn.conflicts = FALSE, quietly = TRUE)
 
 ############# Load the dataset ###############
 
@@ -17,16 +19,13 @@ MyMetaData <- read.csv("../data/PoundHillMetaData.csv",header = T, sep=";", stri
 
 ############# Inspect the dataset ###############
 
-head(MyData)
-dim(MyData)
+print("Inspecting the dataset:", quote = FALSE)
 glimpse(MyData)
 
 ############# Transpose ###############
 # To get those species into columns and treatments into rows
 
 MyData <- t(MyData) 
-head(MyData)
-dim(MyData)
 
 ############# Replace species absences with zeros ###############
 
@@ -39,7 +38,8 @@ colnames(TempData) <- MyData[1,] # assign column names from original data
 
 ############# Convert from wide to long format  ###############
 
-MyWrangledData <- gather(TempData, key = "Species", value = "Count", colnames(TempData[,-(1:4)]),factor_key = TRUE)
+MyWrangledData <- gather(TempData, key = "Species", value = "Count", colnames(TempData[,-(1:4)]),factor_key = TRUE) 
+# compresses all columns referring to a species into one column and generates a count value for each species, storing them in a new column
 
 MyWrangledData[, "Cultivation"] <- as.factor(MyWrangledData[, "Cultivation"])
 MyWrangledData[, "Block"] <- as.factor(MyWrangledData[, "Block"])
@@ -47,8 +47,5 @@ MyWrangledData[, "Plot"] <- as.factor(MyWrangledData[, "Plot"])
 MyWrangledData[, "Quadrat"] <- as.factor(MyWrangledData[, "Quadrat"])
 MyWrangledData[, "Count"] <- as.integer(MyWrangledData[, "Count"])
 
+print("Inspecting the wrangled dataset:",  quote = FALSE)
 glimpse(MyWrangledData)
-head(MyWrangledData)
-dim(MyWrangledData)
-
-############# Exploring the data (extend the script below)  ###############
