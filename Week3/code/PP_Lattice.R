@@ -36,3 +36,5 @@ d = as.data.frame(cbind(Feeding.Type, Predator.Mass.Mean, Predator.Mass.Median, 
 
 print("Saving the results into a csv file...", quote = FALSE)
 write.csv(d, "../results/PP_Results.csv", row.names = FALSE, quote = FALSE)
+
+print("Done!", quote = FALSE)

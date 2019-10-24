@@ -1,13 +1,16 @@
-#Load the maps package
-require(maps)
+#!/usr/bin/env R
 
-#Loads the GPDD data
-load(file = '../data/GPDDFiltered.RData', env = globalenv())
+# importing required packages
+require(maps, quietly = TRUE)
 
-#Draw the map
+# loading the GPDD data
+load(file = '../data/GPDDFiltered.RData')
+
+# creating a world map
 map('world')
 map.axes()
-points(x = as.numeric(gpdd$long), y  = as.numeric(gpdd$lat),
-       pch = 20, cex = 0.1, col ='red')
 
-#A bias coming from the non-uniform distribution of the data points location will probably be present
+# localizing points on the map
+points(x = gpdd$long, y  = gpdd$lat, pch = 8, cex = 0.25, col ='red')
+
+print("The map produced from this script is biased since the data used claims to be a global representation, yet the majority of the samples in study come from European and North American countries.")
