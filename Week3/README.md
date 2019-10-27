@@ -12,17 +12,17 @@
 
 ### Code
 
-* apply1.R
-* apply2.R
-* Autocorrelation.tex
-* basic_io.R
-* boilerplate.R
-* break.R
-* browse.R
-* control_flow.R
-* DataWrang.R
-* DataWrangTidy.R
-* Girko.R
+* apply1.R - application on the apply function
+* apply2.R - application on the apply function
+* Autocorrelation.tex - LaTeX format file that can be compiled to a pdf format using the `CompileLaTeX.sh` bash script from the Week1 directory
+* basic_io.R - illustrates R input-output
+* boilerplate.R - basic boilerplate R script
+* break.R - basic usage of break
+* browse.R - basic usage of the browser function for debugging
+* control_flow.R - basic control flow R script
+* DataWrang.R - basic data management and wrangling workflow
+* DataWrangTidy.R - basic data management and wrangling workflow using dplyr and tidyr
+* Girko.R - 
 * GPDD_Data.R
 * MyBars.R
 * next.R

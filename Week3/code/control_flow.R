@@ -1,3 +1,5 @@
+#!/usr/bin/env R
+
 ## If statement
 a <- TRUE
 if (a == TRUE){

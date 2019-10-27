@@ -1,5 +1,9 @@
+#!/usr/bin/env R
+
 # a simple script to illustrate R input-output.
 # Run line by line and check inputs outputs to understand what is happening
+
+options(warn=-1)
 
 MyData <- read.csv("../data/trees.csv", header = TRUE) # import with headers
 

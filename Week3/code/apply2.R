@@ -1,3 +1,5 @@
+#!/usr/bin/env R
+
 SomeOperation <- function(v){ # (What does this function do?)
     if (sum(v) > 0){
         return (v * 100)

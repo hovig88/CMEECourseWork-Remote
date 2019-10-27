@@ -1,3 +1,5 @@
+#!/usr/bin/env R
+
 i <- 0 #Initialize i
 while(i < Inf){
     if (i == 10) {
