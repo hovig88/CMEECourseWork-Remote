@@ -21,7 +21,8 @@
 * fmr.R - Plotting log(field metabolic rate) against log(body mass) for the Nagy et al 1999 dataset to a pdf file
 * regexs.py - Various usage of regex functions in python
 * TestR.R - test R script to be used in python
-* TestR.py - test python script that runs `TestR.R` using the `subprocess` module
+* TestR.py - Python script that runs `TestR.R` using the `subprocess` module
+
 
 #### Practicals
 
@@ -33,6 +34,7 @@
 * Nets.py - A python version of the network created in `Nets.R`
 * blackbirds.py - Printing out Kingdom, Phylum, and Species names for each species found in the `blackbirds.txt` file
 * using_os.py
+* run_fmr_R.py - Python script that runs `fmr.R` using the `subprocess` module
 
 
 
