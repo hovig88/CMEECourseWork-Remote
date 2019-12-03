@@ -79,3 +79,4 @@ for(i in 1:(nrow(South_Whale_Data)-1)){
 
 # plot
 barplot(t(cbind(North_sfs,South_sfs)), beside = TRUE, names.arg = 1:19, legend = c("North", "South"))
+  
