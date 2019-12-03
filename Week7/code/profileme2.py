@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
 
-"""Some functions to explain the concept of profiling in Python. 
-Improving the functions in profileme.py to make them less time-consuming"""
+"""Some functions to explain the concept of profiling in Python. Improving the functions in profileme.py to make them less time-consuming"""
 
-__appname__ = 'LV1.py'
+__appname__ = 'profileme2.py'
 __author__ = 'Hovig Artinian (ha819@imperial.ac.uk)'
 __version__ = '0.0.1'
 __license__ = 'None'

@@ -12,6 +12,7 @@ __license__ = 'None'
 import scipy as sc
 import scipy.integrate as integrate
 import matplotlib.pylab as p
+import matplotlib.pyplot as plt
 
 ## functions ##
 def dCR_dt(pops, t=0):
@@ -38,25 +39,29 @@ RC0 = sc.array([R0, C0])
 pops, infodict = integrate.odeint(dCR_dt, RC0, t, full_output=True)
 print(infodict['message'])
 
-# plotting figure 1
+# creating a new figure
 f1 = p.figure()
 
-p.plot(t, pops[:,0], 'g-', label='Resource density')
-p.plot(t, pops[:,1], 'b-', label='Consumer density')
-p.grid()
-p.legend(loc='best')
-p.xlabel('Time')
-p.ylabel('Population density')
-p.title('Consumer-Resource population dynamics')
+# creating plot 1
+plt.subplot(2, 1, 1)
+plt.plot(t, pops[:,0], 'g-', label='Resource density')
+plt.plot(t, pops[:,1], 'b-', label='Consumer density')
+plt.grid()
+plt.legend(loc='best')
+plt.xlabel('Time')
+plt.ylabel('Population density')
+plt.title('Consumer-Resource population dynamics')
 
-f1.savefig('../results/LV_model.pdf')
+# creating plot 2
+plt.subplot(2, 1, 2)
+plt.plot(pops[:,0], pops[:,1], 'r-')
+plt.grid()
+plt.xlabel('Resource density')
+plt.ylabel('Consumer density')
 
-# plotting figure 2
-f2 = p.figure()
-p.plot(pops[:,0], pops[:,1], 'r-')
-p.grid()
-p.xlabel('Resource density')
-p.ylabel('Consumer density')
-p.title('Consumer-Resource population dynamics')
+# adjust subplots to avoid overlaps
+plt.tight_layout()
 
-f2.savefig('../results/LV_model2.pdf')
+# saving the figure to a pdf file
+f1.savefig('../results/LV1_model.pdf')
+print("Succesfully created and saved plots!")

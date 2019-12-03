@@ -2,7 +2,7 @@
 
 """Some functions to explain the concept of profiling in Python"""
 
-__appname__ = 'LV1.py'
+__appname__ = 'profileme.py'
 __author__ = 'Hovig Artinian (ha819@imperial.ac.uk)'
 __version__ = '0.0.1'
 __license__ = 'None'
@@ -10,7 +10,7 @@ __license__ = 'None'
 ## functions ##
 def my_squares(iters):
     """This function takes an integer n and returns the 
-    square of each all integers within the range of n."""
+    square of all integers within the range of n."""
     out = []
     for i in range(iters):
         out.append(i ** 2)
