@@ -12,8 +12,8 @@
 
 ### Code
 
-In-class scripts
-----------------
+#### In-class scripts
+
 * profileme.py - Some functions to explain the concept of profiling in Python
 * profileme2.py - Some functions to explain the concept of profiling in Python. Improving the functions in `profileme.py` to make them less time-consuming
 * timeitme.py - Comparing run time for using loops vs list comprehensions and loops vs the join method utilizing the timeit module
@@ -23,8 +23,8 @@ In-class scripts
 * TestR.R - test R script to be used in python
 * TestR.py - test python script that runs `TestR.R` using the `subprocess` module
 
-Practicals
-----------
+#### Practicals
+
 * LV1.py - Calculating the consumer-resource population growth rate and producing two different plots using both consumer and resource density curves
 * LV2.py - Similar to `LV1.py` with the addition of prey density dependence in the model
 * LV3.py - A discrete-time version of the Lotka-Volterra model implemented in `LV2.py`
