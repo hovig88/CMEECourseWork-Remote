@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-"""Test python script that runs TestR.R using the subprocess module"""
+"""Python script that runs TestR.R using the subprocess module"""
 
 __appname__ = 'TestR.py'
 __author__ = 'Hovig Artinian (ha819@imperial.ac.uk)'
