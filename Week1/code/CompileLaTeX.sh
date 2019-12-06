@@ -5,6 +5,14 @@
 # Arguments: 1 -> latex file
 # Date: Oct 2019
 
+# handling input parameters
+if [ -z $1 ]
+then 
+    echo "Please input a file name..."
+    echo "Script did not execute."
+    exit 
+fi
+
 pdflatex $1.tex
 pdflatex $1.tex
 bibtex $1
@@ -24,3 +32,6 @@ rm -f *.snm
 rm -f *.toc
 
 # -f flag ignores nonexistent files and arguments
+
+# move pdf file to appropriate directory
+mv $1.pdf ../results

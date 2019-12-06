@@ -5,7 +5,15 @@
 # Arguments: 1 -> input file
 # Date: Oct 2019
 
-NumLines=`wc -l < $1`
-echo "The file $1 has $NumLines lines"
-echo
+# handling input parameters
+if [ -z $1 ]
+then 
+    echo "Please input a file name..."
+    echo "Script did not execute."
+    exit 
+fi
 
+NumLines=`wc -l < $1` # counts number of lines and stores value in NumLines
+filename=`basename $1`
+
+echo -e "\nThe file ${filename} has $NumLines lines.\n"

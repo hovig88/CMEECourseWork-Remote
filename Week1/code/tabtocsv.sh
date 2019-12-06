@@ -7,6 +7,14 @@
 # Arguments: 1 -> tab delimited file
 # Date: Oct 2019
 
+# handling input parameters
+if [ -z $1 ]
+then 
+    echo "Please input a file name..."
+    echo "Script did not execute." 
+    exit 
+fi
+
 echo "Creating a comma delimited version of $1 ..."
 cat $1 | tr -s "\t" "," >> $1.csv
 echo "Done!"
