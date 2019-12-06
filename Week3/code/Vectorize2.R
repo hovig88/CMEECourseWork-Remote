@@ -32,9 +32,7 @@ stochrickvect<-function(p0=runif(1000,.5,1.5),r=1.2,K=1,sigma=0.2,numyears=100)
   N[1,]<-p0
     
   for (yr in 2:numyears){ #for each pop, loop through the years
-    
     N[yr,] <- N[yr-1,] * exp(r * (1 - N[yr - 1,] / K) + rnorm(1,0,sigma)) # taking the whole row into consideration instead of row element by element
-  
   }
  
   return(N)

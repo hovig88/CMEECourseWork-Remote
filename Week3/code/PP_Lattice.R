@@ -11,7 +11,7 @@ MyDF <- read.csv("../data/EcolArchives-E089-51-D1.csv")
 MyDF$Prey.mass[which(MyDF$Prey.mass.unit=="mg")] = MyDF$Prey.mass[which(MyDF$Prey.mass.unit=="mg")]/1000 # converting all prey massses to same unit
 MyDF$Prey.mass.unit[which(MyDF$Prey.mass.unit=="mg")] = "g"
 
-print("Saving lattice graphs into pdf files...", quote = FALSE)
+print("Creating and saving lattice graphs into pdf files...", quote = FALSE)
 pdf("../results/Pred_Lattice.pdf")
 densityplot(~log(Predator.mass) | Type.of.feeding.interaction, data=MyDF)
 graphics.off()

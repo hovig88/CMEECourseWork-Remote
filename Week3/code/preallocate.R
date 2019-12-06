@@ -1,3 +1,5 @@
+#!/usr/bin/env R
+
 # without pre-allocation
 a <- NA
 print(system.time(
@@ -7,7 +9,6 @@ print(system.time(
         # print(object.size(a))
     }
 ))
-
 
 # with pre-allocate
 a <- rep(NA, 10000)

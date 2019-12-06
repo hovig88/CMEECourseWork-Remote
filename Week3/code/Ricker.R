@@ -1,3 +1,5 @@
+#!/usr/bin/env R
+
 Ricker <- function(N0=1, r=1, K=10, generations=50)
 {
     # Runs a simulation of the Ricker model
@@ -13,4 +15,9 @@ Ricker <- function(N0=1, r=1, K=10, generations=50)
     return (N)
 }
 
+print("Plotting and saving Ricker model...", quote = FALSE)
+pdf("../results/Ricker.pdf")
 plot(Ricker(generations=10), type="l")
+graphics.off()
+
+print("Done!", quote = FALSE)

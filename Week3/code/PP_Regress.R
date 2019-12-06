@@ -10,7 +10,7 @@ require(broom, quietly = TRUE)
 rm(list=ls())
 
 # suppress unnecessary warning messages
-options(warn=-1)
+options(warn = -1)
 
 # fixing dataset
 MyDF = read.csv("../data/EcolArchives-E089-51-D1.csv")

@@ -1,3 +1,5 @@
+#!/usr/bin/env R
+
 ######### Functions ##########
 
 ## A function to make a sample of size n from a population "popn" and return its mean

@@ -1,4 +1,6 @@
-require(ggplot2)
+#!/usr/bin/env R
+
+library(ggplot2)
 
 build_ellipse <- function(hradius, vradius){ # function that returns an ellipse
   npoints = 250
@@ -22,8 +24,7 @@ ellDF <- build_ellipse(my_radius, my_radius) # Dataframe to plot the ellipse
 
 names(ellDF) <- c("Real", "Imaginary") # rename the columns
 
-
-
+print("Creating the plot...", quote = FALSE)
 # plot the eigenvalues
 p <- ggplot(eigDF, aes(x = Real, y = Imaginary))
 p <- p +
@@ -37,6 +38,9 @@ p <- p + geom_vline(aes(xintercept = 0))
 # finally, add the ellipse
 p <- p + geom_polygon(data = ellDF, aes(x = Real, y = Imaginary, alpha = 1/20, fill = "red"))
 
+print("Saving the plot to a pdf file...", quote = FALSE)
 pdf("../results/Girko.pdf")
 print(p)
 graphics.off()
+
+print("Done!", quote = FALSE)

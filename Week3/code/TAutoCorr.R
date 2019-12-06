@@ -7,8 +7,7 @@ load("../data/KeyWestAnnualMeanTemperature.RData")
 
 # plotting the time series and saving the image in a pdf format
 pdf("../results/Temp_Plot.pdf", height = 4)
-plot(ats$Year, ats$Temp, main = "Temperature in Key West, Florida for the 20th Century", xlab = "Years", ylab = "Temperatures")
-lines(ats$Year, ats$Temp)
+plot(ats$Year, ats$Temp, main = "Temperature in Key West, Florida for the 20th Century", xlab = "Years", ylab = "Temperatures", type = "b")
 graphics.off()
 
 # creating two vectors in a (n, n-1) pairing format
