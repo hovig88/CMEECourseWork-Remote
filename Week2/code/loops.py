@@ -1,3 +1,12 @@
+#!/usr/bin/env python3
+
+"""working with loops"""
+
+__appname__ = 'loops.py'
+__author__ = 'Hovig Artinian (ha819@imperial.ac.uk)'
+__version__ = '0.0.1'
+__license__ = 'None'
+
 # FOR loops in Python
 for i in range(5):
     print(i)

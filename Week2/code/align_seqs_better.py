@@ -40,18 +40,37 @@ else:
     s2 = seq1
     l1, l2 = l2, l1 # swap the two lengths
 
-# now try to find the best match (highest score) for the two sequences
-my_best_align = None
-my_best_score = -1
+def main(argv):
+    """ Finds the best alignment and computes the correspondong best score """
 
-for i in range(l1): # Note that you just take the last alignment with the highest score
-    z = cs(s1, s2, l1, l2, i)
-    if z > my_best_score:
-        my_best_align = "." * i + s2 # think about what this is doing!
-        my_best_score = z 
+    if(len(sys.argv)) == 1:
+        print("No input files provided... taking default files...")    
+    elif(len(sys.argv)) >= 4:
+        print("More than 2 input files provided... taking first two...")
+
+    # now try to find the best match (highest score) for the two sequences
+    my_best_align = None
+    my_best_score = -1
+
+    print("Computing score of best alignments...")
+    for i in range(l1): # Note that you just take the last alignment with the highest score
+        z = cs(s1, s2, l1, l2, i)
+        if z > my_best_score:
+            my_best_align = "." * i + s2 # think about what this is doing!
+            my_best_score = z 
     best_align = my_best_align
     seq1 = s1
     best_score = my_best_score
+        
+    print("Saving the result in a text file...")
     with open("../results/best_result_better.txt", 'w') as file:
         file.write("The best alignments are: " + '\n' + best_align + '\n' 
         + seq1 + '\n' + "Score: " + str(best_score) + '\n') 
+
+    print("Done!")
+
+    return 0
+
+if (__name__ == "__main__"):
+    status = main(sys.argv)
+    sys.exit(status)

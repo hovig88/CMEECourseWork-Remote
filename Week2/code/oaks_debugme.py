@@ -52,8 +52,8 @@ def main(argv):
     #oaks = set() - this part is commented out because it is not used
     for row in taxa:
         if 'Genus' in row:
-            csvwrite.writerow([row[0], row[1]])
-            continue
+            csvwrite.writerow([row[0], row[1]]) # writes the row into the csv file
+            continue # but then we skip the loop in order to avoid printing out to the screen (we don't want to print out the header)
         print(row)
         print("The genus is: ") 
         print(row[0] + '\n')
@@ -66,4 +66,4 @@ def main(argv):
 if (__name__ == "__main__"):
     status = main(sys.argv)
 
-doctest.testmod()   # To run with embedded tests
+doctest.testmod() # To run with embedded tests

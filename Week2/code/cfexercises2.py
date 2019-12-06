@@ -1,3 +1,12 @@
+#!/usr/bin/env python3
+
+"""working with loops and conditionals combined"""
+
+__appname__ = 'cfexercises2.py'
+__author__ = 'Hovig Artinian (ha819@imperial.ac.uk)'
+__version__ = '0.0.1'
+__license__ = 'None'
+
 for j in range(12):
     if j % 3 == 0:
         print('hello')

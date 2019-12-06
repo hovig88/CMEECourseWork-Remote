@@ -17,6 +17,5 @@ birds = ( ('Passerculus sandwichensis','Savannah sparrow',18.7),
 x = 1
 for row in birds:
     print("Species " + str(x) + ":")
-    print(row[0] + ", " + row[1] + ", " + str(row[2]))
-    print()
+    print(row[0] + ", " + row[1] + ", " + str(row[2]) + "\n")
     x = x + 1

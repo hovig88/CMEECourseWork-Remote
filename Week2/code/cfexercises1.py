@@ -10,8 +10,6 @@ __license__ = 'None'
 ## imports ##
 import sys # module to interface our program with the operating system
 
-## constants ##
-
 ## functions ##
 
 def foo_1(x):
@@ -61,6 +59,7 @@ def foo_6(x): # Calculate the factorial of x in a different way
     return facto
 
 def main(argv):
+    """Main function of the script - tests out the different functions"""
     print("foo_1 test input: 2")
     print("foo_1 test result: " + str(foo_1(2)) + "\n")
     print("foo_2 test inputs: 33, 23")

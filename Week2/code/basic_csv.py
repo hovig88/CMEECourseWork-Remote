@@ -1,3 +1,13 @@
+#!/usr/bin/env python3
+
+"""running and handling csv files"""
+
+__appname__ = 'basic_csv.py'
+__author__ = 'Hovig Artinian (ha819@imperial.ac.uk)'
+__version__ = '0.0.1'
+__license__ = 'None'
+
+## imports ##
 import csv
 
 # Read a file containing:
