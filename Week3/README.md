@@ -41,7 +41,7 @@
 * try.R - debugging with try function
 * Vectorize1.py - a python version of `Vectorize1.R`
 * Vectorize1.R - an example of how usnig a vectorization approach can enhance the speed of a script
-* Vectorize2.py - a python version of Vectorize2.R
+* Vectorize2.py - a python version of `Vectorize2.R`
 * Vectorize2.R - runs the stochastic Ricker equation with gaussian fluctuations
 
 ### Data
@@ -53,6 +53,10 @@
 * PoundHillMetaData.csv - metadata on the `PoundHillData.csv` dataset
 * Results.txt - some data used in the `MyBars.py` script to show how plot annotation is done
 * trees.csv - a dataset of tree species with their corresponding degrees (angle of elevation of tree) and distance (distance from base of tree in meters)
+* Vectorize1_py.txt - stores time values obtained when running the functions in `Vectorize1_py` script
+* Vectorize1_R.txt - stores time values obtained when running the functions in `Vectorize1_R` script
+* Vectorize2_py.txt - stores time values obtained when running the functions in `Vectorize2_py` script
+* Vectorize2_R.txt - stores time values obtained when running the functions in `Vectorize2_R` script
 
 ## Authors
 
