@@ -68,7 +68,7 @@ In the seventh week, the following sections were covered:
 
 * Biological Computing in Python II
 
-### Week 8
+### MiniProject (Week 8)
 
 This directory includes code and data related to the eighth week's practicals/assignments and in-class scripts. 
 
