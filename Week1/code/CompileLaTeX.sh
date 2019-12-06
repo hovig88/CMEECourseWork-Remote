@@ -13,6 +13,14 @@ then
     exit 
 fi
 
+# 
+if [[ $1 ==  *".tex"* ]]
+then 
+    echo "Please input the file name without the extension..."
+    echo "Script did not execute."
+    exit
+fi
+
 pdflatex $1.tex
 pdflatex $1.tex
 bibtex $1
