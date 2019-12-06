@@ -110,10 +110,14 @@ def main(argv):
         print("Sufficient number of parameters provided... taking first four values...")
     
     # run the model
+    print("Running the model...")
     RC_t(t, R, C)
 
     # create and save plots to pdf
+    print("Creating and saving plots to pdf...")
     plots(t, R, C).savefig('../results/LV4_model.pdf')
+
+    print("Done!")
 
     return 0
 

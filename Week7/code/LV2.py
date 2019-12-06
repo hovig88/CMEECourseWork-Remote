@@ -121,7 +121,7 @@ def main(argv):
     
     # saving the figure to a pdf file
     plots(t, pops).savefig('../results/LV2_model.pdf')
-
+        
     return 0
 
 if (__name__ == "__main__"):
