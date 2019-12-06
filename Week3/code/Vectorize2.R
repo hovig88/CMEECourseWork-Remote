@@ -4,7 +4,7 @@
 
 rm(list=ls())
 
-stochrick<-function(p0=runif(1000,.5,1.5),r=1.2,K=1,sigma=0.2,numyears=100)
+stochrick<-function(p0 = runif(1000, 0.5, 1.5), r = 1.2, K = 1, sigma = 0.2, numyears = 100)
 {
   #initialize
   N<-matrix(NA,numyears,length(p0))
@@ -39,12 +39,16 @@ stochrickvect<-function(p0=runif(1000,.5,1.5),r=1.2,K=1,sigma=0.2,numyears=100)
 
 }
 
+# comparing the computational speeds of the two functions
 s1 = system.time(res1<-stochrick())[3] # store elapsed time of stochrick() function in a variable s1
-print(paste("Non-vectorized Stochastic Ricker takes", as.numeric(s1), "seconds."), quote = FALSE)
+print(paste("Non-vectorized Stochastic Ricker takes", as.numeric(format(round(s1, 3), nsmall = 2)), "seconds."), quote = FALSE)
 
 s2 = system.time(res2<-stochrickvect())[3] # store elapsed time of stochrickvect() function in variable s2
-print(paste("Vectorized Stochastic Ricker takes", as.numeric(s2), "seconds."), quote = FALSE)
+print(paste("Vectorized Stochastic Ricker takes", as.numeric(format(round(s2, 3), nsmall = 2)), "seconds."), quote = FALSE)
 
 ratio = s1/s2 # calculates the ratio of the elapsed times of the two functions
-ratio = as.numeric(format(round(ratio, 2), nsmall = 2)) # formatting the ratio value to output only two digits after the decimal point
+ratio = as.numeric(format(round(ratio, 3), nsmall = 2)) # formatting the ratio value to output only two digits after the decimal point
 print(paste("Vectorizing the function reduced its speed by a magnitude of", ratio), quote = FALSE)
+
+# saving time values to be used later in the run_Vectorize.sh bash script
+write.table(c(as.numeric(format(round(s1, 3), nsmall = 2)), as.numeric(format(round(s2, 3), nsmall = 2))), "../data/Vectorize2_R.txt", row.names = FALSE, col.names = FALSE)
