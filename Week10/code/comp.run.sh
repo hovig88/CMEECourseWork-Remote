@@ -1,7 +1,15 @@
 #!/bin/bash
 
 # compiles C program:
-gcc $1
+gcc -Wall $1
+error=$?
 
-# run the program:
-./a.out
+if [ $error != 0 ]
+then
+    echo "Fix errors to obtain output"
+
+else
+    # run the program:
+    ./a.out
+
+fi
