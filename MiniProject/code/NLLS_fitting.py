@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-"""Insert docstring here"""
+"""This script performs NLLS fitting by finding starting values and residuals, as well as calculating model selection criteria"""
 
 __appname__ = 'NLLS_fitting.py'
 __author__ = 'Hovig Artinian (ha819@imperial.ac.uk)'
@@ -180,9 +180,11 @@ def model_selection_metrics(residuals_Log10, data_Log10, n, p):
     res = observed - predicted # calculating linearized residuals
     rss = sum(res**2) # calculating residual sum of squares
     tss = sum((observed-np.mean(predicted))**2) # calculating total sum of squares
-    AIC = n + 2 + n * np.log((2 * np.pi) / n) + n * np.log(rss) + 2 * p
-    BIC = n + 2 + n * np.log((2 * np.pi) / n) + n * np.log(rss) + (np.log(n)) * (p + 1)
-    R_2 = 1 - (rss / tss)
+    
+    AIC = n + 2 + n * np.log((2 * np.pi) / n) + n * np.log(rss) + 2 * p # calculate AIC
+    BIC = n + 2 + n * np.log((2 * np.pi) / n) + n * np.log(rss) + (np.log(n)) * (p + 1) # calculate BIC
+    R_2 = 1 - (rss / tss) # calculate R^2
+
     # for small sample size to number of parameters ratio, AIC_c is calculated instead of AIC
     if n/p < 40:
         try:

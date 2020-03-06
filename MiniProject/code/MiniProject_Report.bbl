@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{Kingsland1995}
 Sharon~E. Kingsland.
@@ -49,5 +49,30 @@ Nariaki Sugiura.
 \newblock {Further Analysis of the Data by Anaike' S Information Criterion and
   the Finite Corrections}.
 \newblock {\em Communications in Statistics - Theory and Methods}, 1978.
+
+\bibitem{Wickham2018}
+Hadley Wickham, Romain Fran{\c{c}}ois, Lionel Henry, and Kirill M{\"{u}}ller.
+\newblock {\em {Package 'dplyr'}}.
+\newblock 2018.
+
+\bibitem{Wickham2009}
+Hadley Wickham.
+\newblock {\em ggplot2}.
+\newblock 2009.
+
+\bibitem{McKinney2015}
+Wes McKinney and PyData~Development Team.
+\newblock {Pandas - Powerful Python Data Analysis Toolkit}.
+\newblock {\em Pandas - Powerful Python Data Analysis Toolkit}, 2015.
+
+\bibitem{©Copyright2017NumPydevelopers.2017}
+{{\textcopyright} Copyright 2017 NumPy developers.}
+\newblock {NumPy — NumPy}, 2017.
+
+\bibitem{Newville2014}
+Matthew Newville, Antonino Ingargiola, Till Stensitzki, and Daniel~B. Allen.
+\newblock {LMFIT: Non-Linear Least-Square Minimization and Curve-Fitting for
+  Python}.
+\newblock {\em Zenodo}, 2014.
 
 \end{thebibliography}

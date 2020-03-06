@@ -194,23 +194,20 @@ for(i in 1:length(unique(df$ID))){
     df_subset = df_subset[-c(which(df_subset$AIC.AIC_c==0), which(df_subset$AIC.AIC_c==Inf)),]
   }
   
+  # calculate AIC/AIC_c values and AIC differences
   info_criteria[[i]] = data.frame("index" = df_subset$model_ID, "AIC.AIC_c" = df_subset$AIC.AIC_c, "delta_AIC.AIC_c" = df_subset$AIC.AIC_c - min(df_subset$AIC.AIC_c))
   
+  # calculate likelihood of models and their respective akaike weights
   likelihood_model = exp(-0.5*info_criteria[[i]]$delta_AIC.AIC_c)
   akaike_weight = likelihood_model / sum(likelihood_model)
   
+  # add to dataframe and reorder them based on best-to-worst model ranking
   info_criteria[[i]] = cbind(info_criteria[[i]], likelihood_model, akaike_weight)
   info_criteria[[i]] = info_criteria[[i]][order(info_criteria[[i]]$delta_AIC.AIC_c),]
   
+  # calculate evidence ratios
   evidence_ratio = info_criteria[[i]]$akaike_weight[1] / info_criteria[[i]]$akaike_weight
   
+  # add to dataframe
   info_criteria[[i]] = cbind(info_criteria[[i]], evidence_ratio)
 }
-
-count = 0
-for(i in 1:nrow(df)){
-  if(length(which(df[i,4:11]==0))==8)
-    count = count + 1
-}
-
-

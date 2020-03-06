@@ -22,7 +22,7 @@
 		Hovig Artinian\\
 		MSc CMEE\\
 		March 6, 2020\\
-		\wordcount words
+		Word count: \wordcount
 		\vspace*{\fill}
 	\end{titlepage}
 
@@ -51,7 +51,6 @@
 		\label{tab:parameters}
 	\end{table}
 
-	\par The general pattern of the curve is sigmoidal and composed of three main parts: lag phase, exponential phase, and stationary phase %include a figure that only has these three phases%(Figure 1)
 	\par The Non-Linear Least Squares (NLLS) technique was performed for model fitting, which allows models to detect non-linear patterns found in data. Once parameter estimates are found, model selection is performed by calculating several information-theoretic criteria such as AIC, $AIC_c$, BIC, $R^2$, AIC differences, likelihood of models, Akaike weights, and evidence ratios.
 	\par The main objective of this project is to show how sometimes finding a "best" model is not always ideal; rather, a multimodel inference approach would be optimal instead.
 
@@ -62,7 +61,7 @@
 
 	\subsection{Data Analysis}
 	\subsubsection{Model Fitting}
-	Non-linear least squares (NLLS) fitting was used to fit all 7 models to each unique group in the new dataset. 
+	\par Non-linear least squares (NLLS) fitting was used to fit all 7 models to each unique group in the new dataset. 
 	\par To work with this method, starting parameter values must first be provided. The better the starting values, the more precise the estimated parameter values will be.
 	\par For phenomenological models, finding the starting values was straightforward (they were set to 1). In the case of mechanistic models, on the other hand, more computation was needed. The starting values of $N_{max}$ and $N_0$ were set to be the highest and lowest abundance values in the dataset, respectively. That of $r_{max}$ was less direct. A straight-line was fit to the first 50\% of the dataset, and its slope was assigned as the starting value of $r_{max}$. Lastly, the intersection point between the fitted tangent line and the horizontal line at y = $N_0$ was set to be the starting value of $t_{lag}$.
 	\par Next, the actual fitting was performed, where residuals for each models to be fit were provided using the newly found starting values. For each model, if the fit converged, the estimated parameters were saved in a variable; otherwise, the estimated parameter values were set to 0. 
@@ -91,23 +90,20 @@
 	where $w_1$ is the Akaike weight of the model with the lowest AIC value, and $w_j$ is the Akaike weight of the \emph{j}th model.
 	
 	\subsection{Computing Tools}
-	Several programming languages were used to create the different aspects of this project.\\
-	R - data exploration, data preparation, plotting\\
-	packages used: dplyr, ggplot2 (reference)\\
-	Python - heavy computation (NLLS fitting)\\
-	packages used: pandas, numpy, lmfit\\
-	{\LaTeX} - writing the report\\
-	The typesetting was done with LaTeX\\
-	Bash - to stitch all the scripts together\\
-	Git - save all versions of code/scripts\\
-	include packages\\
+	Several programming languages were used to create the different aspects of this project.
+	
+	\par \textbf{R} was used for: (1) data exploration/preparation - playing around with data in R is fast and intuitive, (2) plotting - really good packages that produce nice-looking plots, (3) finding information-theoretic criteria - since calculating statistical measures is fast and straighforward in R. Packages used: \emph{dplyr} \cite{Wickham2018} for data manipulation and \emph{ggplot2} \cite{Wickham2009} for plotting. \textbf{Python} was used to perform heavy computation, especially model fitting since the package for NLLS fitting in Python is much more robust than the one in R. Packages used: \emph{Pandas} \cite{McKinney2015} for using dataframes, \emph{NumPy} \cite{©Copyright2017NumPydevelopers.2017} for scientific and numeric computing, and \emph{LMFIT} \cite{Newville2014} for NLLS fitting. \textbf{\LaTeX} was used for typesetting. \textbf{Bash} was used to glue the R and Python scripts together. \textbf{Git} was used for version control of all codes/scripts/workflow.
 
 	\section{Results}
 	\subsection{Model Fitting}
 	Model fitting convergence success rate was 100\% for 5 out of the 7 models used for NLLS fitting. The baranyi model converged 80.98\% of the time when fitted to all 305 groups, while the the logistic model did  not converge with over half the total number of groups in the dataset (44.92\%)
 	
-	\subsection{Model Selection}
+	\par Figure \label{} below gives a general idea of what some of the data look like and how the models were able to be overlaid.
 	
+	\par However, visualizing the plots is not a reliable way of determining good fits. Looking at the model selection criteria can be more helpful in this case, which is shown in the next section.
+	
+	\subsection{Model Selection}
+	\subsubsection{Case 1}
 	
 	\section{Discussion}
 
@@ -135,7 +131,7 @@
 	studying the death phase %include a figure that has all 4 phases%
 	
 	\section{Acknowledgements}
-	I would like to extend my gratitude to my fellow colleagues Pablo Lechon and Sam Turner for engaging in insightful discussions with me about the miniproject, as well as pulling an all-nighter the night before the submission deadline (Yes, Samraat, we know you know).
+	I would like to extend my gratitude to my fellow colleagues Pablo Lechon and Sam Turner for engaging in insightful discussions with me about the miniproject, as well as pulling an all-nighter the night before the submission deadline.
 	
 	\end{linenumbers}
 
