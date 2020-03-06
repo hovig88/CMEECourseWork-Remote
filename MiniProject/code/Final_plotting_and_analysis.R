@@ -21,7 +21,7 @@ options(warn=-1)
 ## PLOTTING ##
 
 # opening a pdf file to save all plots inside it
-pdf("../results/plots/data_with_models_ggplot.pdf", onefile = TRUE)
+pdf("../results/data_with_models_ggplot.pdf", onefile = TRUE)
 
 for(i in 1:length(unique(df$ID))){
   # creating a subset at each iteration based on the unique IDs
