@@ -368,8 +368,10 @@ for(i in representative_models){
   model_data = rbind(linear_data, quadratic_data, cubic_data, logistic_data, gompertz_data, baranyi_data, buchanan_data)
   
   if(i != 68){
-    model_index = info_criteria[[i]][-which(info_criteria[[i]]$delta_AIC.AIC_c > 10),]$index
-    model_data = model_data[model_data$model_ID==model_index, ]
+    if(i != 242){
+      model_index = info_criteria[[i]][-which(info_criteria[[i]]$delta_AIC.AIC_c > 10),]$index
+      model_data = model_data[model_data$model_ID==model_index, ]
+    }
   }
   
   # plotting dataset with all the models overlaid

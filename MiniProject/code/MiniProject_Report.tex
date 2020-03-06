@@ -146,28 +146,8 @@
 		\label{tab:figure_242}
 	\end{figure}
 
-	Although Akaike's Information Criterion is recognized as a major measure for selecting models, it has one major drawback: The AIC values lack intuitivity (easy to use and understand) despite higher values meaning less goodness-of-fit. For this purpose, Akaike weights come to hand for calculating the weights in a regime of several models. Additional measures can be derived, such as Δ(AIC) and relative likelihoods that demonstrate the probability of one model being in favor over the other.\\
-	
-	AIC:\\
-	good thing: it accounts for overfitting - it has a penalty that increases as more parameters are added. Adding parameters will almost always improve the goodness of the fit.\\
-	An individual AIC value, by itself, is not interpretable due to the unknown constant (interval scale). AIC is only comparative, relative to other AIC values in the model set; thus such differences $\Delta_i$ are very important and useful.
-	
-	It is important to note here that AIC values do not give any information about the goodness-of-fit of a model to the data. Rather, they show how each model performs relative to the other ones in the set. Hence, a single AIC value of a model has no meaning.
-	
-	\textbf{BOOK:}\\
-	Ambivalence:
-	\par The inability to ferret out a single best model is not a defect of AIC or any other selection criterion. Rather, it is an indication that the data are simply inadequate to reach such a strong inference. That is, the data are ambivalent concerning some effect or parametrization or structure.
-	\par In such cases, all the models in the set can be used to make robust inferences: multimodel inference.\\
-
-	\par The AIC differences ($\Delta_i$) and Akaike weights ($w_i$) are important in ranking and scaling the hypotheses, represented by models. The evidence ratios (e.g., $w_i$/$w_j$) help sharpen the evidence for or against the various alternative hypotheses. All of these values are easy to compute and simple to understand and interpret.\\
-
-	\par The principle of parsimony provides a philosophical basis for model selection, K-L information provides an objective target based on deep theory, and AIC, $AIC_c$, $QAIC_c$, and TIC provide estimators of relative, expected K-L information. Objective model selection is rigorously based on these principles. These methods are applicable across a very wide range of scientific hypotheses and statistical models. We recommend presentation of log($\mathcal{L}$($\hat\theta$)), K, the appropriate information criterion (AIC, $AIC_c$, $QAIC_c$, or TIC), $\Delta_i$, and $w_i$ for various models in research papers to provide full information concerning the evidence for each of the models.\\
-
-	\par \textbf{Do not mix null hypothesis testing with information-theoretic criteria:}\\
-	Some authors state that the best model (say $g_1$) is \emph{significantly} better than another model (say $g_6$ based on a $\Delta$ value of 4-7. Alternatively, sometimes one sees that model $g_6$ is rejected relative to the best model. These statements are poor and misleading. It seems best not to associate the words significant or rejected with results under an information-theoretic paradigm. Questions concerning the strength of evidence for the models in the set are best addressed using the evidence ratio (Section 2.10), as well as an analysis of residuals, adjusted R2, and other model diagnostics or descriptive statistics.
-
 	\section{Conclusion \& Future Work}
-	studying the death phase %include a figure that has all 4 phases%
+	Based on the different cases, one can make a clear argument about different ways of finding models to fit data. Sometimes, one model will truly be a good fit, so good that other models in the same set are incomparable. But, so often, especially in the world of biology, where natural phenomena happen randomly, one model will not be enough to capture the behavior of these phenomena. Therefore, multimodel inference, heavily based on information theory, should be considered as the tool for the future of modelling in general, and ecology in specific.
 	
 	\section{Acknowledgements}
 	I would like to extend my gratitude to my fellow colleagues Pablo Lechon and Sam Turner for engaging in insightful discussions with me about the miniproject, as well as pulling an all-nighter the night before the submission deadline.

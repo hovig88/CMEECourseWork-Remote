@@ -53,7 +53,11 @@ cat texcount.sum | head -c 4 > texcount2.sum
 
 # compile LaTeX-formatted report including the word count
 bash CompileLaTeX.sh MiniProject_Report > trash.txt
+
+# remove unnecessary files
 rm trash.txt
+rm texcount.sum
+rm texcount2
 
 end=$(date +%s.%N)
 runtime=$(python3 -c "print(${end} - ${start})")
