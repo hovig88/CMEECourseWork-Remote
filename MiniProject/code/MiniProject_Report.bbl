@@ -50,6 +50,18 @@ Nariaki Sugiura.
   the Finite Corrections}.
 \newblock {\em Communications in Statistics - Theory and Methods}, 1978.
 
+\bibitem{Anderson2002}
+D.~R. {Burnham, K. P. and Anderson}.
+\newblock {Model Selection and Inference: a Practical Information‐theoretic
+  Approach}.
+\newblock {\em Model selection and multimodel inference, 2nd ed. Springer, New
+  York}, 2002.
+
+\bibitem{RDevelopmentCoreTeam2011}
+R~{R Development Core Team}.
+\newblock {\em {R: A Language and Environment for Statistical Computing}}.
+\newblock 2011.
+
 \bibitem{Wickham2018}
 Hadley Wickham, Romain Fran{\c{c}}ois, Lionel Henry, and Kirill M{\"{u}}ller.
 \newblock {\em {Package 'dplyr'}}.
@@ -59,6 +71,10 @@ Hadley Wickham, Romain Fran{\c{c}}ois, Lionel Henry, and Kirill M{\"{u}}ller.
 Hadley Wickham.
 \newblock {\em ggplot2}.
 \newblock 2009.
+
+\bibitem{Foundation}
+Python~Software Foundation.
+\newblock {Python Language Reference}.
 
 \bibitem{McKinney2015}
 Wes McKinney and PyData~Development Team.

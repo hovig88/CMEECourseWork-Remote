@@ -3,47 +3,48 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: MiniProject_Report.aux
 The style file: unsrt.bst
 Database file #1: library.bib
+Warning--empty publisher in RDevelopmentCoreTeam2011
 Warning--empty publisher in Wickham2018
 Warning--empty publisher in Wickham2009
-You've used 14 entries,
+You've used 17 entries,
             1791 wiz_defined-function locations,
-            530 strings with 5816 characters,
-and the built_in function-call counts, 2115 in all, are:
-= -- 159
-> -- 109
+            546 strings with 6274 characters,
+and the built_in function-call counts, 2505 in all, are:
+= -- 188
+> -- 121
 < -- 0
-+ -- 43
-- -- 29
-* -- 79
-:= -- 373
-add.period$ -- 40
-call.type$ -- 14
-change.case$ -- 10
++ -- 49
+- -- 32
+* -- 87
+:= -- 435
+add.period$ -- 48
+call.type$ -- 17
+change.case$ -- 12
 chr.to.int$ -- 0
-cite$ -- 16
-duplicate$ -- 114
-empty$ -- 225
-format.name$ -- 29
-if$ -- 466
+cite$ -- 20
+duplicate$ -- 137
+empty$ -- 276
+format.name$ -- 32
+if$ -- 555
 int.to.chr$ -- 0
-int.to.str$ -- 14
-missing$ -- 16
-newline$ -- 71
-num.names$ -- 14
-pop$ -- 67
+int.to.str$ -- 17
+missing$ -- 19
+newline$ -- 85
+num.names$ -- 17
+pop$ -- 83
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 43
+skip$ -- 55
 stack$ -- 0
 substring$ -- 0
-swap$ -- 14
+swap$ -- 17
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 2
-while$ -- 14
-width$ -- 16
-write$ -- 137
-(There were 2 warnings)
+warning$ -- 3
+while$ -- 17
+width$ -- 19
+write$ -- 163
+(There were 3 warnings)
