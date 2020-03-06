@@ -9,8 +9,6 @@
 
 # load required package and dataset
 library(ggplot2, quietly = TRUE, warn.conflicts = FALSE)
-library(grid, quietly = TRUE, warn.conflicts = FALSE)
-library(gridExtra, quietly = TRUE, warn.conflicts = FALSE)
 
 df = read.csv("../data/results.csv")
 data = read.csv("../data/ModifiedLogisticGrowthData.csv")
