@@ -1,0 +1,13 @@
+\contentsline {section}{\numberline {1}Introduction}{2}
+\contentsline {section}{\numberline {2}Materials \& Methods}{3}
+\contentsline {subsection}{\numberline {2.1}Data Preparation}{3}
+\contentsline {subsection}{\numberline {2.2}Data Analysis}{4}
+\contentsline {subsubsection}{\numberline {2.2.1}Model Fitting}{4}
+\contentsline {subsubsection}{\numberline {2.2.2}Model selection}{4}
+\contentsline {subsection}{\numberline {2.3}Computing Tools}{6}
+\contentsline {section}{\numberline {3}Results}{7}
+\contentsline {subsection}{\numberline {3.1}Model Fitting}{7}
+\contentsline {subsection}{\numberline {3.2}Model Selection}{7}
+\contentsline {section}{\numberline {4}Discussion}{7}
+\contentsline {section}{\numberline {5}Conclusion \& Future Work}{10}
+\contentsline {section}{\numberline {6}Acknowledgements}{10}

@@ -13,9 +13,10 @@ library(ggplot2, quietly = TRUE, warn.conflicts = FALSE)
 df = read.csv("../data/results.csv")
 data = read.csv("../data/ModifiedLogisticGrowthData.csv")
 
-## PLOTTING ##
+#suppress warnings to avoid printing it out
+options(warn=-1)
 
-graphics.off()
+## PLOTTING ##
 
 # opening a pdf file to save all plots inside it
 pdf("../results/plots/data_with_models_ggplot.pdf", onefile = TRUE)
@@ -175,8 +176,9 @@ for(i in 1:length(unique(df$ID))){
     theme(panel.background = element_rect(fill = 'white', colour = 'black'), aspect.ratio = 1) +
     labs(x = "Time (h)", y = "Abundance"))
 }
-    
-dev.off()
+
+# close all graphics devices
+invisible(dev.off())
 
 
 ## ANALYSIS ##
@@ -184,7 +186,6 @@ dev.off()
 info_criteria = vector(mode = "list", length = 305)
 for(i in 1:length(unique(df$ID))){
   # creating a subset at each iteration based on the unique IDs
-  data_subset = subset(data, data$ID == i)
   df_subset = subset(df, df$ID == i)
   
   # VERY CRUCIAL! if some models did not converge, make sure to remove their corresponding rows, otherwise they might end up being selected as AIC_min
@@ -205,3 +206,11 @@ for(i in 1:length(unique(df$ID))){
   
   info_criteria[[i]] = cbind(info_criteria[[i]], evidence_ratio)
 }
+
+count = 0
+for(i in 1:nrow(df)){
+  if(length(which(df[i,4:11]==0))==8)
+    count = count + 1
+}
+
+

@@ -46,13 +46,15 @@ echo -e "Time taken: $(echo $runtime3 | bc -l | xargs printf "%.3f") seconds\n"
 echo "Compiling the LaTeX-formatted report..."
 
 start=$(date +%s.%N)
-bash CompileLaTeX.sh MiniProject_Report
 
 # calculate the word count of the report and save it 
-texcount -1 -sum MiniProject_Report.tex > texcount.sum
+texcount -1 MiniProject_Report.tex > texcount.sum
+cat texcount.sum | head -c 4 > texcount2.sum
 
-# recompile LaTeX-formatted report to include the word count
-bash CompileLaTeX.sh MiniProject_Report
+# compile LaTeX-formatted report including the word count
+bash CompileLaTeX.sh MiniProject_Report > trash.txt
+rm trash.txt
+
 end=$(date +%s.%N)
 runtime=$(python3 -c "print(${end} - ${start})")
 runtime4=$(echo $runtime | bc -l | xargs printf "%.3f")
@@ -62,4 +64,4 @@ echo -e "Time taken: $(echo $runtime4 | bc -l | xargs printf "%.3f") seconds\n"
 
 # completed! print total time taken
 echo "Report complete!"
-echo "Total time taken: $(($runtime1+$runtime2+$runtime3+$runtime4))"
+echo "Total time taken: $(awk "BEGIN {print $runtime1+$runtime2+$runtime3+$runtime4; exit}") seconds"

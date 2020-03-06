@@ -6,7 +6,7 @@
 \doublespacing
 
 % Word Count %
-\newcommand\wordcount{\input{texcount.sum}}
+\newcommand\wordcount{\input{texcount2.sum}}
 
 \begin{document}
 
@@ -21,54 +21,75 @@
 		\hfill \break
 		Hovig Artinian\\
 		MSc CMEE\\
-		March 6, 2020
-	%	\wordcount words
+		March 6, 2020\\
+		\wordcount words
 		\vspace*{\fill}
 	\end{titlepage}
 
+
+	\tableofcontents
+	
+	\newpage
 	\begin{linenumbers}
 	\section{Introduction}
 
-	Modelling nature has been the general interest in the field of ecology for over a century \cite{Kingsland1995}. 
-	The study of bacterial population growth has been a major interest in various fields, mainly in food microbiology, for many decades. The main part of this area of research involves fitting models to bacterial growth curves generated when population abundance is plotted as a function of time. The reason for this is to be able to capture the behavior of the curve.
-	\par The general pattern of the curve is sigmoidal and composed of three main parts: lag phase, exponential phase, and stationary phase %include a figure that only has these three phases%
-	\\
-	This technique allows models to detect non-linear patterns found in data.\\
-	(Figure 1). In earlier years, phenomenological models were used to fit such curves. However, they would either fail to capture the true behaviour of the curve, or would not have any biological significance. In more recent years, scientists in the field have developed mechanistic models to mitigate these issues.
-	\par In this project, seven models were used to fit various bacterial species abundance data gathered from lab experiments around the world. Three phenomenological and four mechanistic models were used (Table 1). The main objective was to compare the performance of these models.
-
+	Modelling nature has been the general interest in the field of ecology for over a century \cite{Kingsland1995}. A crucial part of this process involves model selection. The basic approach is the null hypothesis testing, where biological inferences are made based on whether or not a suggested hypothesis is rejected \cite{Johnson2004}. This would be based on arbitrary criteria such as p-values, confidence intervals, and t-tests, that are set by statisticians as general rules of thumb. Amidst this mayhem, however, some scientists have started to shift their workflow towards more robust approaches that rely on advanced mathematical theories.
+	\par In this project, the information-theoretic approach is used for model selection. This methodology is based on information theory \cite{Guiasu1977}.
+	\par Preceding the model selection phase, however, is finding parameter estimates of models by fitting them to data. 7 models are used in this study: linear, quadratic, cubic, logistic \cite{Pearl1920}, gompertz \cite{Zwietering1990}, baranyi \cite{Baranyi1994}, and buchanan \cite{Buchanan1997}. The first three are phenomenological, which means their parameters have no biological significance. For the mechanistic models, however, 4 parameters are involved and are described in Table \ref{tab:parameters} below.
+	
 	\begin{table}[ht]
 		\centering
-		\begin{tabular}{|c|c|c|}
-		\hline
-		Model Name & Model Type & Equation \\
-		\hline
-		\hline
-		Linear & Phenomenological & eq1 \\
-		\hline
-		Quadratic & Phenomenological & eq2 \\
-		\hline
-		Cubic & Phenomenological & eq3 \\
-		\hline
+		\begin{tabular}{|l|l|l|}
+			\hline
+			Parameter & Description              & Models included                       \\ \hline\hline
+			$N_{max}$ & carrying capacity        & logistic, gompertz, baranyi, buchanan \\ \hline
+			$N_0$     & initial abundance value  & logistic, gompertz, baranyi, buchanan \\ \hline
+			$r_{max}$ & growth rate              & logistic, gompertz, baranyi, buchanan \\ \hline
+			$t_{lag}$ & time taken for lag phase & gompertz, baranyi, buchanan           \\ \hline
 		\end{tabular}
-		\caption{Models used}
-		\label{tab:models}
+		\caption{Parameters involved in the mechanistic models used in this study with their corresponding descriptions.}
+		\label{tab:parameters}
 	\end{table}
 
-	\section{Methods}
+	\par The general pattern of the curve is sigmoidal and composed of three main parts: lag phase, exponential phase, and stationary phase %include a figure that only has these three phases%(Figure 1)
+	\par The Non-Linear Least Squares (NLLS) technique was performed for model fitting, which allows models to detect non-linear patterns found in data. Once parameter estimates are found, model selection is performed by calculating several information-theoretic criteria such as AIC, $AIC_c$, BIC, $R^2$, AIC differences, likelihood of models, Akaike weights, and evidence ratios.
+	\par The main objective of this project is to show how sometimes finding a "best" model is not always ideal; rather, a multimodel inference approach would be optimal instead.
+
+	\section{Materials \& Methods}
 	\subsection{Data Preparation}
-	The starting dataset consisted of 4387 samples. No missing abundance values were detected. However, negative values were present. The smallest value was largely negative and, hence, removed. To deal with the rest while still minimizing the amount of data points lost, the smallest value was added to the whole data, and then removed (to avoid having zero as an abundance value). The end result was a dataset with 4385 values.
-	Next, each species/temperature/medium/citation/replicate were grouped together, resulting in 305 unique IDs. Finally, the new dataset was saved to be used for data analysis.
+	The starting dataset consisted of 4387 samples. No missing abundance values were detected. However, negative values were present. The smallest value was largely negative and, hence, removed. To deal with the rest, while still minimizing the amount of data points lost, the smallest value was added to the whole data, and then removed (to avoid having zero as an abundance value). The end result was a dataset with 4385 values.
+	Next, each species/temperature/medium/citation/replicate was grouped together, resulting in 305 unique IDs. Finally, the new dataset was saved to be used for data analysis.
 
 	\subsection{Data Analysis}
 	\subsubsection{Model Fitting}
 	Non-linear least squares (NLLS) fitting was used to fit all 7 models to each unique group in the new dataset. 
 	\par To work with this method, starting parameter values must first be provided. The better the starting values, the more precise the estimated parameter values will be.
-	\par In the case of phenomenological models, finding the starting values was straightforward (they were set to 1). On the other hand, the starting values for mechanistic models needed more computation. The starting values of $N_{max}$, also known as the carrying capacity, and $N_0$ were set to be the highest and lowest abundance values in the dataset, respectively. That of $r_{max}$,the growth rate, was less direct. A straight-line was fit to the first 50\% of the dataset, and its slope was assigned as the starting value of $r_{max}$. Lastly, the intersection point between the fitted tangent line and the horizontal line at y = $N_0$ was set to be the starting value of $t_{lag}$.
+	\par For phenomenological models, finding the starting values was straightforward (they were set to 1). In the case of mechanistic models, on the other hand, more computation was needed. The starting values of $N_{max}$ and $N_0$ were set to be the highest and lowest abundance values in the dataset, respectively. That of $r_{max}$ was less direct. A straight-line was fit to the first 50\% of the dataset, and its slope was assigned as the starting value of $r_{max}$. Lastly, the intersection point between the fitted tangent line and the horizontal line at y = $N_0$ was set to be the starting value of $t_{lag}$.
 	\par Next, the actual fitting was performed, where residuals for each models to be fit were provided using the newly found starting values. For each model, if the fit converged, the estimated parameters were saved in a variable; otherwise, the estimated parameter values were set to 0. 
 	\subsubsection{Model selection}
-	\par For model selection, AIC, $AIC_c$, BIC, and $R^2$ values were calculated. 
-
+	\par For model selection, first, Akaike's Information Criterion (AIC) \cite{Akaike1973} was calculated for each model. The AIC value gives the quality of each model relative to the other models in the set used for fitting the data. Hence, the model with the lowest AIC score is preferred. For models where the sample size (n) to number of parameters (K) ratio was less than 40 (arbitrary suggestion), $AIC_c$ was calculated instead. It is known to be the second-order variant of AIC derived by Sugiura  in 1978 \cite{Sugiura1978}. The difference is in the bias-correction term added to the AIC value of the model. This makes sure that when sample size and number of parameters are close, the model gets heavily penalized.
+	\par Next, AIC\footnote[1]{To avoid repetition, the term "AIC" will be used to mean both AIC and $AIC_c$. There is, however, a distinction between them, as explained, and the reader should bear that in mind.} differences ($\Delta_i$) were calculated to get a better idea of the empirical support provided by each model in the set; thus, obtaining a relative ranking of all the models in the set. The formula is given as follows:
+	\begin{equation}
+		\Delta_i = AIC_i - AIC_{min}
+	\end{equation}
+	where $AIC_i$ is the AIC value of the \emph{i}th model and $AIC_{min}$ is the AIC value of the "best" model in the set. The larger the difference, the less likely it is for that model to be the best. This likelihood was quantified and calculated by the following formula:
+	\begin{equation}
+		\mathcal{L}(g_i|x) \propto e^{-\frac{1}{2}\Delta_i}
+	\end{equation}
+	
+	\par Contrary to $\Delta_i$, the larger the relative likelihood of a model, the better chances it has to be the preferred model.
+	For better interpretation, the likelihood of the models were normalized, adding to 1. This normalized form is known as the Akaike weight, $w_i$ of a model:
+	\begin{equation}
+		w_i = \frac{e^{-\frac{1}{2}\Delta_i}}{\displaystyle\sum_{r=1}^{R} e^{-\frac{1}{2}\Delta_r}}
+	\end{equation}
+	where R is the number of models.
+	
+	\par Lastly, evidence ratios were calculated to show how reliable it is to believe that the best model is actually a good fit for the data. To put it in another way, evidence ratios reveal whether or not the best model in a set of models works best alone, or within a group consisting of one or more of the other models in the set. It can be found by simply calculating the ratio of Akaike weights:
+	\begin{equation}
+		Evidence\ ratio = \frac{w_1}{w_j}
+	\end{equation}
+	where $w_1$ is the Akaike weight of the model with the lowest AIC value, and $w_j$ is the Akaike weight of the \emph{j}th model.
+	
 	\subsection{Computing Tools}
 	Several programming languages were used to create the different aspects of this project.\\
 	R - data exploration, data preparation, plotting\\
@@ -76,17 +97,28 @@
 	Python - heavy computation (NLLS fitting)\\
 	packages used: pandas, numpy, lmfit\\
 	{\LaTeX} - writing the report\\
+	The typesetting was done with LaTeX\\
 	Bash - to stitch all the scripts together\\
 	Git - save all versions of code/scripts\\
 	include packages\\
-	%for italics:
-	\emph{https://github.com/alexandervdm/gummi}.
 
 	\section{Results}
+	\subsection{Model Fitting}
+	Model fitting convergence success rate was 100\% for 5 out of the 7 models used for NLLS fitting. The baranyi model converged 80.98\% of the time when fitted to all 305 groups, while the the logistic model did  not converge with over half the total number of groups in the dataset (44.92\%)
+	
+	\subsection{Model Selection}
+	
+	
 	\section{Discussion}
 
-	Although Akaike's Information Criterion is recognized as a major measure for selecting models, it has one major drawback: The AIC values lack intuitivity despite higher values meaning less goodness-of-fit. For this purpose, Akaike weights come to hand for calculating the weights in a regime of several models. Additional measures can be derived, such as Δ(AIC) and relative likelihoods that demonstrate the probability of one model being in favor over the other.\\
-
+	Although Akaike's Information Criterion is recognized as a major measure for selecting models, it has one major drawback: The AIC values lack intuitivity (easy to use and understand) despite higher values meaning less goodness-of-fit. For this purpose, Akaike weights come to hand for calculating the weights in a regime of several models. Additional measures can be derived, such as Δ(AIC) and relative likelihoods that demonstrate the probability of one model being in favor over the other.\\
+	
+	AIC:\\
+	good thing: it accounts for overfitting - it has a penalty that increases as more parameters are added. Adding parameters will almost always improve the goodness of the fit.\\
+	An individual AIC value, by itself, is not interpretable due to the unknown constant (interval scale). AIC is only comparative, relative to other AIC values in the model set; thus such differences $\Delta_i$ are very important and useful.
+	
+	It is important to note here that AIC values do not give any information about the goodness-of-fit of a model to the data. Rather, they show how each model performs relative to the other ones in the set. Hence, a single AIC value of a model has no meaning.
+	
 	\textbf{BOOK:}\\
 	Ambivalence:
 	\par The inability to ferret out a single best model is not a defect of AIC or any other selection criterion. Rather, it is an indication that the data are simply inadequate to reach such a strong inference. That is, the data are ambivalent concerning some effect or parametrization or structure.
@@ -101,6 +133,9 @@
 
 	\section{Conclusion \& Future Work}
 	studying the death phase %include a figure that has all 4 phases%
+	
+	\section{Acknowledgements}
+	I would like to extend my gratitude to my fellow colleagues Pablo Lechon and Sam Turner for engaging in insightful discussions with me about the miniproject, as well as pulling an all-nighter the night before the submission deadline (Yes, Samraat, we know you know).
 	
 	\end{linenumbers}
 

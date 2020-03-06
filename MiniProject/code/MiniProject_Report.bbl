@@ -6,4 +6,48 @@ Sharon~E. Kingsland.
   Ecology}}.
 \newblock University of Chicago Press, 1995.
 
+\bibitem{Johnson2004}
+Jerald~B. Johnson and Kristian~S. Omland.
+\newblock {Model selection in ecology and evolution}, 2004.
+
+\bibitem{Guiasu1977}
+S.~Guiasu.
+\newblock {\em {Information theory with applications}}.
+\newblock McGraw-Hill, New York, NY, 1977.
+
+\bibitem{Pearl1920}
+R.~Pearl and L.~J. Reed.
+\newblock {On the Rate of Growth of the Population of the United States since
+  1790 and Its Mathematical Representation}.
+\newblock {\em Proceedings of the National Academy of Sciences}, 1920.
+
+\bibitem{Zwietering1990}
+M.~H. Zwietering, I.~Jongenburger, F.~M. Rombouts, and K.~{Van't Riet}.
+\newblock {Modeling of the bacterial growth curve}.
+\newblock {\em Applied and Environmental Microbiology}, 1990.
+
+\bibitem{Baranyi1994}
+J{\'{o}}zsef Baranyi and Terry~A. Roberts.
+\newblock {A dynamic approach to predicting bacterial growth in food}.
+\newblock {\em International Journal of Food Microbiology}, 1994.
+
+\bibitem{Buchanan1997}
+R.~L. Buchanan, R.~C. Whiting, and W.~C. Damert.
+\newblock {When is simple good enough: A comparison of the Gompertz, Baranyi,
+  and three-phase linear models for fitting bacterial growth curves}.
+\newblock {\em Food Microbiology}, 1997.
+
+\bibitem{Akaike1973}
+H~Akaike.
+\newblock {Information theory and an extension of the maximum likelihood
+  principle. Proceedings of the 2nd international symposium on information
+  theory}.
+\newblock {\em Second International Symposium on Information Theory}, 1973.
+
+\bibitem{Sugiura1978}
+Nariaki Sugiura.
+\newblock {Further Analysis of the Data by Anaike' S Information Criterion and
+  the Finite Corrections}.
+\newblock {\em Communications in Statistics - Theory and Methods}, 1978.
+
 \end{thebibliography}
