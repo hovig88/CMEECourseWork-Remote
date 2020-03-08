@@ -9,13 +9,13 @@ Note that:
 
 ======================================================================
 ======================================================================
-Your Git repo size this week is about 3.25 MiB on disk 
+Your Git repo size this week is about 137.28 MiB on disk 
 
 PART 1: Checking project workflow...
 
-Found the following directories in parent directory: Week1, Assessment, Week2, .git, Week3
+Found the following directories in parent directory: Week6, Week1, Week7, Assessment, Week10, Week5, Week2, Week9, Week4, .git, Week3, MiniProject
 
-Found the following files in parent directory: .gitignore, README.md, .gitignore.save
+Found the following files in parent directory: .gitignore, README.md
 
 Checking for key files in parent directory...
 
@@ -26,6 +26,43 @@ Printing contents of .gitignore:
 *~
 *.tmp
 __pycache__/
+
+# History files
+.Rhistory
+.Rapp.history
+
+# Session Data files
+.RData
+
+# User-specific files
+.Ruserdata
+
+# Example code in package build process
+*-Ex.R
+
+# Output files from R CMD build
+/*.tar.gz
+
+# Output files from R CMD check
+/*.Rcheck/
+
+# RStudio files
+.Rproj.user/
+
+# produced vignettes
+vignettes/*.html
+vignettes/*.pdf
+
+# OAuth2 token, see https://github.com/hadley/httr/releases/tag/v0.3
+.httr-oauth
+
+# knitr and R markdown default cache directories
+*_cache/
+/cache/
+
+# Temporary files created by R markdown
+*.utf8.md
+*.knit.md
 **********************************************************************
 
 Found README in parent directory, named: README.md
@@ -59,6 +96,73 @@ In the second week, the following sections were covered:
 
 * Biological computing in Python I
 
+### Week 3
+
+This directory includes code and data related to the third week's practicals/assignments and in-class scripts. 
+
+In the third week, the following sections were covered:
+
+* Biological Computing in R
+
+### Week 4
+
+This directory includes code and data related to the fourth week's practicals/assignments and in-class scripts. 
+
+In the fourth week, the following sections were covered:
+
+* Statistics in R
+* CMEE Miniproject Start
+
+### Week 5
+
+This directory includes code and data related to the fifth week's practicals/assignments and in-class scripts. 
+
+In the fifth week, the following sections were covered:
+
+* Statistics in R
+* Spatial Analyses and GIS
+* CMEE Miniproject Start
+
+### Week 6
+
+This directory includes code and data related to the sixth week's practicals/assignments and in-class scripts. 
+
+In the sixth week, the following sections were covered:
+
+* Genomics and Bioinformatics
+
+### Week 7
+
+This directory includes code and data related to the seventh week's practicals/assignments and in-class scripts. 
+
+In the seventh week, the following sections were covered:
+
+* Biological Computing in Python II
+
+### MiniProject (Week 8)
+
+This directory includes code and data related to the eighth week's practicals/assignments and in-class scripts. 
+
+In the eighth week, the following sections were covered:
+
+* CMEE Miniproject: Hackathon
+
+### Week 9
+
+This directory includes code and data related to the ninth week's practicals/assignments and in-class scripts. 
+
+In the ninth week, the following sections were covered:
+
+* High Performance Computing
+
+### Week 10
+
+This directory includes code and data related to the tenth week's practicals/assignments and in-class scripts. 
+
+In the tenth week, the following sections were covered:
+
+* Biological Data Structures and C
+
 ## Authors
 
 Jedi (in training): Hovig Artinian
@@ -79,7 +183,7 @@ I would like to thank Master Jedi Samraat Pawar for accepting me as his young pa
 ======================================================================
 Looking for the weekly directories...
 
-Found 3 weekly directories: Week1, Week2, Week3
+Found 9 weekly directories: Week1, Week10, Week2, Week3, Week4, Week5, Week6, Week7, Week9
 
 The Week2 directory will be assessed 
 
@@ -237,9 +341,12 @@ print("We get the same output as expected!")
 Testing lc2.py...
 
 lc2.py is a Python script file;
- checking for docstrings...
 
-Found one or more doctrings!
+checking for docstrings...
+
+Found no functions, but one docstring for the script, good
+
+Current Points = 100
 
 Output (only first 500 characters): 
 
@@ -262,7 +369,7 @@ We get the same output as expected!
 
 Code ran without errors
 
-Time consumed = 0.02572s
+Time consumed = 0.02642s
 
 ======================================================================
 Inspecting script file boilerplate.py...
@@ -301,9 +408,12 @@ if __name__ == "__main__":
 Testing boilerplate.py...
 
 boilerplate.py is a Python script file;
- checking for docstrings...
 
-Found one or more doctrings!
+checking for docstrings...
+
+Found one or more docstrings and functions
+
+Current Points = 100
 
 Output (only first 500 characters): 
 
@@ -314,13 +424,23 @@ This is a boilerplate
 
 Code ran without errors
 
-Time consumed = 0.02803s
+Time consumed = 0.03075s
 
 ======================================================================
 Inspecting script file basic_csv.py...
 
 File contents are:
 **********************************************************************
+#!/usr/bin/env python3
+
+"""running and handling csv files"""
+
+__appname__ = 'basic_csv.py'
+__author__ = 'Hovig Artinian (ha819@imperial.ac.uk)'
+__version__ = '0.0.1'
+__license__ = 'None'
+
+## imports ##
 import csv
 
 # Read a file containing:
@@ -353,12 +473,12 @@ g.close()
 Testing basic_csv.py...
 
 basic_csv.py is a Python script file;
- checking for docstrings...
 
-Found no doctrings!
-1 pt deducted
+checking for docstrings...
 
-Current Points = 99
+Found no functions, but one docstring for the script, good
+
+Current Points = 100
 
 Output (only first 500 characters): 
 
@@ -376,13 +496,22 @@ The species is Avahi_laniger
 
 Code ran without errors
 
-Time consumed = 0.02904s
+Time consumed = 0.02867s
 
 ======================================================================
 Inspecting script file cfexercises2.py...
 
 File contents are:
 **********************************************************************
+#!/usr/bin/env python3
+
+"""working with loops and conditionals combined"""
+
+__appname__ = 'cfexercises2.py'
+__author__ = 'Hovig Artinian (ha819@imperial.ac.uk)'
+__version__ = '0.0.1'
+__license__ = 'None'
+
 for j in range(12):
     if j % 3 == 0:
         print('hello')
@@ -411,12 +540,12 @@ while z < 100:
 Testing cfexercises2.py...
 
 cfexercises2.py is a Python script file;
- checking for docstrings...
 
-Found no doctrings!
-1 pt deducted
+checking for docstrings...
 
-Current Points = 98
+Found no functions, but one docstring for the script, good
+
+Current Points = 100
 
 Output (only first 500 characters): 
 
@@ -448,7 +577,7 @@ hello
 
 Code ran without errors
 
-Time consumed = 0.03207s
+Time consumed = 0.02571s
 
 ======================================================================
 Inspecting script file align_seqs_better.py...
@@ -497,41 +626,65 @@ else:
     s2 = seq1
     l1, l2 = l2, l1 # swap the two lengths
 
-# now try to find the best match (highest score) for the two sequences
-my_best_align = None
-my_best_score = -1
+def main(argv):
+    """ Finds the best alignment and computes the correspondong best score """
 
-for i in range(l1): # Note that you just take the last alignment with the highest score
-    z = cs(s1, s2, l1, l2, i)
-    if z > my_best_score:
-        my_best_align = "." * i + s2 # think about what this is doing!
-        my_best_score = z 
+    if(len(sys.argv)) == 1:
+        print("No input files provided... taking default files...")    
+    elif(len(sys.argv)) >= 4:
+        print("More than 2 input files provided... taking first two...")
+
+    # now try to find the best match (highest score) for the two sequences
+    my_best_align = None
+    my_best_score = -1
+
+    print("Computing score of best alignments...")
+    for i in range(l1): # Note that you just take the last alignment with the highest score
+        z = cs(s1, s2, l1, l2, i)
+        if z > my_best_score:
+            my_best_align = "." * i + s2 # think about what this is doing!
+            my_best_score = z 
     best_align = my_best_align
     seq1 = s1
     best_score = my_best_score
+        
+    print("Saving the result in a text file...")
     with open("../results/best_result_better.txt", 'w') as file:
         file.write("The best alignments are: " + '\n' + best_align + '\n' 
         + seq1 + '\n' + "Score: " + str(best_score) + '\n') 
+
+    print("Done!")
+
+    return 0
+
+if (__name__ == "__main__"):
+    status = main(sys.argv)
+    sys.exit(status)
 **********************************************************************
 
 Testing align_seqs_better.py...
 
 align_seqs_better.py is a Python script file;
- checking for docstrings...
 
-Found one or more doctrings!
+checking for docstrings...
+
+Found one or more docstrings and functions
+
+Current Points = 100
 
 Output (only first 500 characters): 
 
 **********************************************************************
 No input files provided... taking default files...
-No input files provided... taking default files...
+Computing score of best alignments...
+Saving the result in a text file...
+Done!
 
 **********************************************************************
 
 Code ran without errors
 
-Time consumed = 8.95614s
+Time consumed = 3.33053s
 
 ======================================================================
 Inspecting script file dictionary.py...
@@ -561,51 +714,70 @@ taxa = [ ('Myotis lucifugus','Chiroptera'),
 
 taxa_dic={}
 x = 0
-for row in taxa:
-        if row[1] not in taxa_dic.keys():
+for row in taxa: # loops over each tuple
+        if row[1] not in taxa_dic.keys(): # populates unique dictionary keys
                 taxa_dic[row[1]] = []
-                x = x +1
+                x = x + 1
 
-        for key in taxa_dic.keys():
-                if key == row[1]:
-                        taxa_dic[key].append(row[0])
+        for key in taxa_dic.keys(): # loops over each key value
+                if key == row[1]: # if the key value matches the second string in the tuple 
+                        taxa_dic[key].append(row[0]) # add the first string as a value to the key
 
-print("Order Names : Taxa")
+# printing out dictionary keys with their corresponding values 
+print("Order Names :    Taxa")
+print("-----------      ----")
 for key,val in taxa_dic.items():
-        print(key, ": ", val)
+        print(key, ":   ", val)
 **********************************************************************
 
 Testing dictionary.py...
 
 dictionary.py is a Python script file;
- checking for docstrings...
 
-Found one or more doctrings!
+checking for docstrings...
+
+Found no functions, but one docstring for the script, good
+
+Current Points = 100
 
 Output (only first 500 characters): 
 
 **********************************************************************
-Order Names : Taxa
-Carnivora :  ['Lyacon pictus', 'Arctocephalus gazella', 'Canis lupus']
-Rodentia :  ['Gerbillus henleyi', 'Peromyscus crinitus', 'Mus domesticus', 'Cleithrionomys rutilus']
-Chiroptera :  ['Myotis lucifugus']
-Afrosoricida :  ['Microgale dobsoni', 'Microgale talazaci']
+Order Names :    Taxa
+-----------      ----
+Carnivora :    ['Lyacon pictus', 'Arctocephalus gazella', 'Canis lupus']
+Rodentia :    ['Gerbillus henleyi', 'Peromyscus crinitus', 'Mus domesticus', 'Cleithrionomys rutilus']
+Chiroptera :    ['Myotis lucifugus']
+Afrosoricida :    ['Microgale dobsoni', 'Microgale talazaci']
 
 **********************************************************************
 
 Code ran without errors
 
-Time consumed = 0.02502s
+Time consumed = 0.02597s
 
 ======================================================================
 Inspecting script file debugme.py...
 
 File contents are:
 **********************************************************************
+#!/usr/bin/env python3
+
+"""small script that includes a bug that needs to be fixed"""
+
+__appname__ = 'debugme.py'
+__author__ = 'Hovig Artinian (ha819@imperial.ac.uk)'
+__version__ = '0.0.1'
+__license__ = 'None'
+
 def makeabug(x):
+    """This function creates a bug and handles it with an error message."""
     y = x**4
-    z = 0.
-    y = y/z
+    z = 0
+    try:
+        y = y/z
+    except ZeroDivisionError:
+        print("ZeroDivisionError: float division by zero")
     return y
 
 makeabug(25)**********************************************************************
@@ -613,32 +785,38 @@ makeabug(25)********************************************************************
 Testing debugme.py...
 
 debugme.py is a Python script file;
- checking for docstrings...
 
-Found no doctrings!
-1 pt deducted
+checking for docstrings...
 
-Current Points = 97
+Found one or more docstrings and functions
+
+Current Points = 100
 
 Output (only first 500 characters): 
 
 **********************************************************************
+ZeroDivisionError: float division by zero
 
 **********************************************************************
 
-Encountered error (or warning):
-Traceback (most recent call last):
-  File "debugme.py", line 7, in <module>
-    makeabug(25)
-  File "debugme.py", line 4, in makeabug
-    y = y/z
-ZeroDivisionError: float division by zero
+Code ran without errors
+
+Time consumed = 0.03012s
 
 ======================================================================
 Inspecting script file scope.py...
 
 File contents are:
 **********************************************************************
+#!/usr/bin/env python3
+
+"""shows the different usage of local and global variables"""
+
+__appname__ = 'scope.py'
+__author__ = 'Hovig Artinian (ha819@imperial.ac.uk)'
+__version__ = '0.0.1'
+__license__ = 'None'
+
 #1
 _a_global = 10 # a global variable
 
@@ -646,6 +824,8 @@ if _a_global > 5:
     _b_global = _a_global + 5 # also a global variable
 
 def a_function():
+    """This function shows the usage of local and global variables"""
+
     _a_global = 5 # a local variable
     
     if _a_global >= 5:
@@ -668,6 +848,8 @@ print("Outside the function, the value of _b_global is ", _b_global)
 _a_global = 10
 
 def a_function():
+    """This function shows the usage of local and global variables"""
+
     _a_local = 4
     
     print("Inside the function, the value _a_local is ", _a_local)
@@ -685,6 +867,8 @@ _a_global = 10
 print("Outside the function, the value of _a_global is", _a_global)
 
 def a_function():
+    """This function shows the usage of local and global variables"""
+
     global _a_global
     _a_global = 5
     _a_local = 4
@@ -700,9 +884,13 @@ print("Outside the function, the value of _a_global now is", _a_global)
 
 #4
 def a_function():
+    """This function shows the usage of local and global variables"""
+
     _a_global = 10
 
     def _a_function2():
+        """This function shows the usage of local and global variables"""
+
         global _a_global
         _a_global = 20
     
@@ -720,8 +908,11 @@ print("The value of a_global in main workspace / namespace is ", _a_global)
 _a_global = 10
 
 def a_function():
+    """This function shows the usage of local and global variables"""
 
     def _a_function2():
+        """This function shows the usage of local and global variables"""
+        
         global _a_global
         _a_global = 20
     
@@ -739,12 +930,12 @@ print("The value of a_global in main workspace / namespace is ", _a_global)
 Testing scope.py...
 
 scope.py is a Python script file;
- checking for docstrings...
 
-Found no doctrings!
-1 pt deducted
+checking for docstrings...
 
-Current Points = 96
+Found one or more docstrings and functions
+
+Current Points = 100
 
 Output (only first 500 characters): 
 
@@ -763,13 +954,22 @@ Inside the function, the value of _a_global is
 
 Code ran without errors
 
-Time consumed = 0.03430s
+Time consumed = 0.03071s
 
 ======================================================================
 Inspecting script file basic_io3.py...
 
 File contents are:
 **********************************************************************
+#!/usr/bin/env python3
+
+"""importing/exporting data"""
+
+__appname__ = 'basic_io3.py'
+__author__ = 'Hovig Artinian (ha819@imperial.ac.uk)'
+__version__ = '0.0.1'
+__license__ = 'None'
+
 #############################
 # STORING OBJECTS
 #############################
@@ -793,12 +993,12 @@ print(another_dictionary)
 Testing basic_io3.py...
 
 basic_io3.py is a Python script file;
- checking for docstrings...
 
-Found no doctrings!
-1 pt deducted
+checking for docstrings...
 
-Current Points = 95
+Found no functions, but one docstring for the script, good
+
+Current Points = 100
 
 Output (only first 500 characters): 
 
@@ -809,7 +1009,7 @@ Output (only first 500 characters):
 
 Code ran without errors
 
-Time consumed = 0.06596s
+Time consumed = 0.03145s
 
 ======================================================================
 Inspecting script file cfexercises1.py...
@@ -827,8 +1027,6 @@ __license__ = 'None'
 
 ## imports ##
 import sys # module to interface our program with the operating system
-
-## constants ##
 
 ## functions ##
 
@@ -879,6 +1077,7 @@ def foo_6(x): # Calculate the factorial of x in a different way
     return facto
 
 def main(argv):
+    """Main function of the script - tests out the different functions"""
     print("foo_1 test input: 2")
     print("foo_1 test result: " + str(foo_1(2)) + "\n")
     print("foo_2 test inputs: 33, 23")
@@ -901,9 +1100,12 @@ if (__name__ == "__main__"):
 Testing cfexercises1.py...
 
 cfexercises1.py is a Python script file;
- checking for docstrings...
 
-Found one or more doctrings!
+checking for docstrings...
+
+Found one or more docstrings and functions
+
+Current Points = 100
 
 Output (only first 500 characters): 
 
@@ -930,7 +1132,7 @@ foo_6 test result: 120
 
 Code ran without errors
 
-Time consumed = 0.03032s
+Time consumed = 0.02976s
 
 ======================================================================
 Inspecting script file tuple.py...
@@ -956,16 +1158,18 @@ birds = ( ('Passerculus sandwichensis','Savannah sparrow',18.7),
 x = 1
 for row in birds:
     print("Species " + str(x) + ":")
-    print(row[0] + ", " + row[1] + ", " + str(row[2]))
-    print()
+    print(row[0] + ", " + row[1] + ", " + str(row[2]) + "\n")
     x = x + 1**********************************************************************
 
 Testing tuple.py...
 
 tuple.py is a Python script file;
- checking for docstrings...
 
-Found one or more doctrings!
+checking for docstrings...
+
+Found no functions, but one docstring for the script, good
+
+Current Points = 100
 
 Output (only first 500 characters): 
 
@@ -990,7 +1194,7 @@ Tachycineata bicolor, Tree swallow, 20.2
 
 Code ran without errors
 
-Time consumed = 0.02788s
+Time consumed = 0.02896s
 
 ======================================================================
 Inspecting script file lc1.py...
@@ -1057,9 +1261,12 @@ print("We get the same output as expected!")
 Testing lc1.py...
 
 lc1.py is a Python script file;
- checking for docstrings...
 
-Found one or more doctrings!
+checking for docstrings...
+
+Found no functions, but one docstring for the script, good
+
+Current Points = 100
 
 Output (only first 500 characters): 
 
@@ -1081,7 +1288,7 @@ Common Names:
 
 Code ran without errors
 
-Time consumed = 0.02778s
+Time consumed = 0.03482s
 
 ======================================================================
 Inspecting script file oaks_debugme.py...
@@ -1142,8 +1349,8 @@ def main(argv):
     #oaks = set() - this part is commented out because it is not used
     for row in taxa:
         if 'Genus' in row:
-            csvwrite.writerow([row[0], row[1]])
-            continue
+            csvwrite.writerow([row[0], row[1]]) # writes the row into the csv file
+            continue # but then we skip the loop in order to avoid printing out to the screen (we don't want to print out the header)
         print(row)
         print("The genus is: ") 
         print(row[0] + '\n')
@@ -1156,15 +1363,18 @@ def main(argv):
 if (__name__ == "__main__"):
     status = main(sys.argv)
 
-doctest.testmod()   # To run with embedded tests
+doctest.testmod() # To run with embedded tests
 **********************************************************************
 
 Testing oaks_debugme.py...
 
 oaks_debugme.py is a Python script file;
- checking for docstrings...
 
-Found one or more doctrings!
+checking for docstrings...
+
+Found one or more docstrings and functions
+
+Current Points = 100
 
 Output (only first 500 characters): 
 
@@ -1200,13 +1410,23 @@ FOUND AN OAK!
 
 Code ran without errors
 
-Time consumed = 0.07053s
+Time consumed = 0.07278s
 
 ======================================================================
 Inspecting script file oaks.py...
 
 File contents are:
 **********************************************************************
+#!/usr/bin/env python3
+
+"""finds those taxa that are oak trees from a list of species"""
+
+__appname__ = 'oaks.py'
+__author__ = 'Hovig Artinian (ha819@imperial.ac.uk)'
+__version__ = '0.0.1'
+__license__ = 'None'
+
+
 ## Finds just those taxa that are oak trees from a list of species
 
 taxa = [ 'Quercus robur',
@@ -1217,6 +1437,7 @@ taxa = [ 'Quercus robur',
        ]
 
 def is_an_oak(name):
+    """This function takes a string and returns TRUE if the string marches 'quercus '."""
     return name.lower().startswith('quercus ')
 
 ##Using for loops
@@ -1245,32 +1466,41 @@ print(oaks_lc)
 Testing oaks.py...
 
 oaks.py is a Python script file;
- checking for docstrings...
 
-Found no doctrings!
-1 pt deducted
+checking for docstrings...
 
-Current Points = 94
+Found one or more docstrings and functions
+
+Current Points = 100
 
 Output (only first 500 characters): 
 
 **********************************************************************
-{'Quercus cerris', 'Quercus petraea', 'Quercus robur'}
-{'Quercus cerris', 'Quercus petraea', 'Quercus robur'}
-{'QUERCUS ROBUR', 'QUERCUS CERRIS', 'QUERCUS PETRAEA'}
-{'QUERCUS ROBUR', 'QUERCUS CERRIS', 'QUERCUS PETRAEA'}
+{'Quercus robur', 'Quercus cerris', 'Quercus petraea'}
+{'Quercus robur', 'Quercus cerris', 'Quercus petraea'}
+{'QUERCUS CERRIS', 'QUERCUS PETRAEA', 'QUERCUS ROBUR'}
+{'QUERCUS CERRIS', 'QUERCUS PETRAEA', 'QUERCUS ROBUR'}
 
 **********************************************************************
 
 Code ran without errors
 
-Time consumed = 0.05067s
+Time consumed = 0.03177s
 
 ======================================================================
 Inspecting script file loops.py...
 
 File contents are:
 **********************************************************************
+#!/usr/bin/env python3
+
+"""working with loops"""
+
+__appname__ = 'loops.py'
+__author__ = 'Hovig Artinian (ha819@imperial.ac.uk)'
+__version__ = '0.0.1'
+__license__ = 'None'
+
 # FOR loops in Python
 for i in range(5):
     print(i)
@@ -1294,17 +1524,18 @@ while z < 100:
 b = True
 while b:
     print("GERONIMO! infinite loop! ctrl+c to stop!")
-# ctrl + c to stop!**********************************************************************
+# ctrl + c to stop!
+**********************************************************************
 
 Testing loops.py...
 
 loops.py is a Python script file;
- checking for docstrings...
 
-Found no doctrings!
-1 pt deducted
+checking for docstrings...
 
-Current Points = 93
+Found no functions, but one docstring for the script, good
+
+Current Points = 100
 
 Output (only first 500 characters): 
 
@@ -1433,7 +1664,7 @@ GERONIMO! infinite loop! ctrl+c
 
 Code ran without errors
 
-Time consumed = 10.27551s
+Time consumed = 10.33688s
 
 ======================================================================
 Inspecting script file using_name.py...
@@ -1441,24 +1672,31 @@ Inspecting script file using_name.py...
 File contents are:
 **********************************************************************
 #!/usr/bin/env python3
-# Filename: using_name.py
+
+"""small script to explain why we put __name__ = '__main__'"""
+
+__appname__ = 'using_name.py'
+__author__ = 'Hovig Artinian (ha819@imperial.ac.uk)'
+__version__ = '0.0.1'
+__license__ = 'None'
 
 if __name__ == '__main__':
     print('This program is being run by itself')
 else:
     print('I am being imported from another module')
 
-print("This module's name is: " + __name__)**********************************************************************
+print("This module's name is: " + __name__)
+**********************************************************************
 
 Testing using_name.py...
 
 using_name.py is a Python script file;
- checking for docstrings...
 
-Found no doctrings!
-1 pt deducted
+checking for docstrings...
 
-Current Points = 92
+Found no functions, but one docstring for the script, good
+
+Current Points = 100
 
 Output (only first 500 characters): 
 
@@ -1470,7 +1708,7 @@ This module's name is: __main__
 
 Code ran without errors
 
-Time consumed = 0.07208s
+Time consumed = 0.06253s
 
 ======================================================================
 Inspecting script file align_seqs.py...
@@ -1569,9 +1807,12 @@ if (__name__ == "__main__"):
 Testing align_seqs.py...
 
 align_seqs.py is a Python script file;
- checking for docstrings...
 
-Found one or more doctrings!
+checking for docstrings...
+
+Found one or more docstrings and functions
+
+Current Points = 100
 
 Output (only first 500 characters): 
 
@@ -1584,13 +1825,22 @@ Done!
 
 Code ran without errors
 
-Time consumed = 0.04864s
+Time consumed = 0.05141s
 
 ======================================================================
 Inspecting script file basic_io2.py...
 
 File contents are:
 **********************************************************************
+#!/usr/bin/env python3
+
+"""importing/exporting data"""
+
+__appname__ = 'basic_io2.py'
+__author__ = 'Hovig Artinian (ha819@imperial.ac.uk)'
+__version__ = '0.0.1'
+__license__ = 'None'
+
 #############################
 # FILE OUTPUT
 #############################
@@ -1607,12 +1857,12 @@ f.close()
 Testing basic_io2.py...
 
 basic_io2.py is a Python script file;
- checking for docstrings...
 
-Found no doctrings!
-1 pt deducted
+checking for docstrings...
 
-Current Points = 91
+Found no functions, but one docstring for the script, good
+
+Current Points = 100
 
 Output (only first 500 characters): 
 
@@ -1622,7 +1872,7 @@ Output (only first 500 characters):
 
 Code ran without errors
 
-Time consumed = 0.02541s
+Time consumed = 0.02483s
 
 ======================================================================
 Inspecting script file sysargv.py...
@@ -1631,21 +1881,31 @@ File contents are:
 **********************************************************************
 #!/usr/bin/env python3
 
+"""small script to explain the concept of sys.argv"""
+
+__appname__ = 'sysargv.py'
+__author__ = 'Hovig Artinian (ha819@imperial.ac.uk)'
+__version__ = '0.0.1'
+__license__ = 'None'
+
+## imports ##
 import sys
+
 print(sys.argv)
 print("This is the name of the script: ", sys.argv[0])
 print("Number of arguments: ", len(sys.argv))
-print("The arguments are: ", str(sys.argv))**********************************************************************
+print("The arguments are: ", str(sys.argv))
+**********************************************************************
 
 Testing sysargv.py...
 
 sysargv.py is a Python script file;
- checking for docstrings...
 
-Found no doctrings!
-1 pt deducted
+checking for docstrings...
 
-Current Points = 90
+Found no functions, but one docstring for the script, good
+
+Current Points = 100
 
 Output (only first 500 characters): 
 
@@ -1659,7 +1919,7 @@ The arguments are:  ['sysargv.py']
 
 Code ran without errors
 
-Time consumed = 0.02738s
+Time consumed = 0.02676s
 
 ======================================================================
 Inspecting script file align_seqs_fasta.py...
@@ -1685,7 +1945,6 @@ def inputs(args):
     """ This function makes sure the script can handle 
     inputs, whether there are none, 1, 2, or more"""
     if(len(args)) == 1:
-        print("No input files provided... taking default files...")
         seq1 = open("../data/fasta/407228326.fasta", "r")
         seq2 = open("../data/fasta/407228412.fasta", "r")
     elif(len(args)) == 2:
@@ -1695,7 +1954,6 @@ def inputs(args):
         seq1 = open(args[1], "r")
         seq2 = open(args[2], "r")
     elif(len(args)) >= 4:
-        print("More than 2 input files provided... taking first two...")
         seq1 = open(args[1], "r")
         seq2 = open(args[2], "r")
     
@@ -1723,40 +1981,65 @@ else:
     s2 = seq1
     l1, l2 = l2, l1 # swap the two lengths
 
-# now try to find the best match (highest score) for the two sequences
-my_best_align = None
-my_best_score = -1
+def main(argv):
+    """ Finds the best alignment and computes the correspondong best score """
+    
+    if(len(sys.argv)) == 1:
+        print("No input files provided... taking default files...")
+    elif(len(sys.argv)) >= 4:
+        print("More than 2 input files provided... taking first two...")
+    
+    # now try to find the best match (highest score) for the two sequences
+    my_best_align = None
+    my_best_score = -1
 
-for i in range(l1): # Note that you just take the last alignment with the highest score
-    z = cs(s1, s2, l1, l2, i)
-    if z > my_best_score:
-        my_best_align = "." * i + s2 # think about what this is doing!
-        my_best_score = z 
-best_align = my_best_align
-seq1 = s1
-best_score = my_best_score
-with open("../results/best_result_fasta.txt", 'w') as file:
-    file.write("The best alignment is: " + '\n' + best_align + '\n' 
-    + seq1 + '\n' + "Score: " + str(best_score) + '\n') 
+    print("Computing score of best alignment...")
+    for i in range(l1): # Note that you just take the last alignment with the highest score
+        z = cs(s1, s2, l1, l2, i)
+        if z > my_best_score:
+            my_best_align = "." * i + s2 # think about what this is doing!
+            my_best_score = z 
+    best_align = my_best_align
+    seq1 = s1
+    best_score = my_best_score
+
+    print("Saving the result in a text file...")
+    with open("../results/best_result_fasta.txt", 'w') as file:
+        file.write("The best alignment is: " + '\n' + best_align + '\n' 
+        + seq1 + '\n' + "Score: " + str(best_score) + '\n') 
+
+    print("Done!")
+
+    return 0
+
+if (__name__ == "__main__"):
+    status = main(sys.argv)
+    sys.exit(status)
 **********************************************************************
 
 Testing align_seqs_fasta.py...
 
 align_seqs_fasta.py is a Python script file;
- checking for docstrings...
 
-Found one or more doctrings!
+checking for docstrings...
+
+Found one or more docstrings and functions
+
+Current Points = 100
 
 Output (only first 500 characters): 
 
 **********************************************************************
 No input files provided... taking default files...
+Computing score of best alignment...
+Saving the result in a text file...
+Done!
 
 **********************************************************************
 
 Code ran without errors
 
-Time consumed = 4.84136s
+Time consumed = 3.40700s
 
 ======================================================================
 Inspecting script file control_flow.py...
@@ -1836,9 +2119,14 @@ if (__name__ == "__main__"):
 Testing control_flow.py...
 
 control_flow.py is a Python script file;
- checking for docstrings...
 
-Found one or more doctrings!
+checking for docstrings...
+
+Found one or more docstrings and functions
+
+Missing docstring, either in one or functions and/or at the script level
+
+Current Points = 99.5
 
 Output (only first 500 characters): 
 
@@ -1870,7 +2158,7 @@ True
 
 Code ran without errors
 
-Time consumed = 0.02932s
+Time consumed = 0.02636s
 
 ======================================================================
 Inspecting script file test_control_flow.py...
@@ -1932,9 +2220,14 @@ doctest.testmod()   # To run with embedded tests
 Testing test_control_flow.py...
 
 test_control_flow.py is a Python script file;
- checking for docstrings...
 
-Found one or more doctrings!
+checking for docstrings...
+
+Found one or more docstrings and functions
+
+Missing docstring, either in one or functions and/or at the script level
+
+Current Points = 99.0
 
 Output (only first 500 characters): 
 
@@ -1944,13 +2237,22 @@ Output (only first 500 characters):
 
 Code ran without errors
 
-Time consumed = 0.06994s
+Time consumed = 0.06840s
 
 ======================================================================
 Inspecting script file basic_io1.py...
 
 File contents are:
 **********************************************************************
+#!/usr/bin/env python3
+
+"""importing/exporting data"""
+
+__appname__ = 'basic_io1.py'
+__author__ = 'Hovig Artinian (ha819@imperial.ac.uk)'
+__version__ = '0.0.1'
+__license__ = 'None'
+
 #############################
 # FILE INPUT
 #############################
@@ -1976,12 +2278,12 @@ f.close()
 Testing basic_io1.py...
 
 basic_io1.py is a Python script file;
- checking for docstrings...
 
-Found no doctrings!
-1 pt deducted
+checking for docstrings...
 
-Current Points = 89
+Found no functions, but one docstring for the script, good
+
+Current Points = 99.0
 
 Output (only first 500 characters): 
 
@@ -2011,19 +2313,19 @@ Fourth Line
 
 Code ran without errors
 
-Time consumed = 0.02663s
+Time consumed = 0.02657s
 
 ======================================================================
 ======================================================================
 Finished running scripts
 
-Ran into 1 errors
+Ran into 0 errors
 
 ======================================================================
 ======================================================================
 
 FINISHED WEEKLY ASSESSMENT
 
-Current Points for the Week = 89
+Current Points for the Week = 99.0
 
 NOTE THAT THESE ARE POINTS, NOT MARKS FOR THE WEEK!

@@ -1,0 +1,555 @@
+Starting weekly assessment for Hovig, Week6
+
+Current Points = 100
+
+Note that: 
+(1) Major sections begin with a double "====" line 
+(2) Subsections begin with a single "====" line 
+(3) Code output or text file content are printed within single "*****" lines 
+
+======================================================================
+======================================================================
+Your Git repo size this week is about 137.28 MiB on disk 
+
+PART 1: Checking project workflow...
+
+Found the following directories in parent directory: Week6, Week1, Week7, Assessment, Week10, Week5, Week2, Week9, Week4, .git, Week3, MiniProject
+
+Found the following files in parent directory: .gitignore, README.md
+
+Checking for key files in parent directory...
+
+Found .gitignore in parent directory, great! 
+
+Printing contents of .gitignore:
+**********************************************************************
+*~
+*.tmp
+__pycache__/
+
+# History files
+.Rhistory
+.Rapp.history
+
+# Session Data files
+.RData
+
+# User-specific files
+.Ruserdata
+
+# Example code in package build process
+*-Ex.R
+
+# Output files from R CMD build
+/*.tar.gz
+
+# Output files from R CMD check
+/*.Rcheck/
+
+# RStudio files
+.Rproj.user/
+
+# produced vignettes
+vignettes/*.html
+vignettes/*.pdf
+
+# OAuth2 token, see https://github.com/hadley/httr/releases/tag/v0.3
+.httr-oauth
+
+# knitr and R markdown default cache directories
+*_cache/
+/cache/
+
+# Temporary files created by R markdown
+*.utf8.md
+*.knit.md
+**********************************************************************
+
+Found README in parent directory, named: README.md
+
+Printing contents of README.md:
+**********************************************************************
+# Computational Methods in Ecology and Evolution (CMEE) Masters Program
+
+* This repository includes weekly practicals/assignments and in-class scripts required for the partial completion of the CMEE Masters program.
+
+* The **CMEECourseWork-Remote** directory contains a `.gitignore` file and subdirectories named as `Week1`, `Week2`,...etc. This will be updated weekly as the course progresses. 
+
+## Contents
+
+### Week 1
+
+This directory includes code and data related to the first week's practicals/assignments and in-class scripts. 
+
+In the first week, the following sections were covered:
+
+* Unix
+* Shell scripting
+* Version control with Git
+* Scientific documents with LaTeX
+
+### Week 2
+
+This directory includes code and data related to the second week's practicals/assignments and in-class scripts. 
+
+In the second week, the following sections were covered:
+
+* Biological computing in Python I
+
+### Week 3
+
+This directory includes code and data related to the third week's practicals/assignments and in-class scripts. 
+
+In the third week, the following sections were covered:
+
+* Biological Computing in R
+
+### Week 4
+
+This directory includes code and data related to the fourth week's practicals/assignments and in-class scripts. 
+
+In the fourth week, the following sections were covered:
+
+* Statistics in R
+* CMEE Miniproject Start
+
+### Week 5
+
+This directory includes code and data related to the fifth week's practicals/assignments and in-class scripts. 
+
+In the fifth week, the following sections were covered:
+
+* Statistics in R
+* Spatial Analyses and GIS
+* CMEE Miniproject Start
+
+### Week 6
+
+This directory includes code and data related to the sixth week's practicals/assignments and in-class scripts. 
+
+In the sixth week, the following sections were covered:
+
+* Genomics and Bioinformatics
+
+### Week 7
+
+This directory includes code and data related to the seventh week's practicals/assignments and in-class scripts. 
+
+In the seventh week, the following sections were covered:
+
+* Biological Computing in Python II
+
+### MiniProject (Week 8)
+
+This directory includes code and data related to the eighth week's practicals/assignments and in-class scripts. 
+
+In the eighth week, the following sections were covered:
+
+* CMEE Miniproject: Hackathon
+
+### Week 9
+
+This directory includes code and data related to the ninth week's practicals/assignments and in-class scripts. 
+
+In the ninth week, the following sections were covered:
+
+* High Performance Computing
+
+### Week 10
+
+This directory includes code and data related to the tenth week's practicals/assignments and in-class scripts. 
+
+In the tenth week, the following sections were covered:
+
+* Biological Data Structures and C
+
+## Authors
+
+Jedi (in training): Hovig Artinian
+
+Academic email: ha819@ic.ac.uk
+
+Personal email: artinianhovig@gmail.com
+
+## License
+
+None
+
+## Acknowledgements
+
+I would like to thank Master Jedi Samraat Pawar for accepting me as his young padawan.
+**********************************************************************
+
+======================================================================
+Looking for the weekly directories...
+
+Found 9 weekly directories: Week1, Week10, Week2, Week3, Week4, Week5, Week6, Week7, Week9
+
+The Week6 directory will be assessed 
+
+======================================================================
+======================================================================
+PART 2: Checking weekly code and workflow...
+
+======================================================================
+Assessing WEEK6...
+
+Found the following directories: code, sandbox, data, results
+
+Found the following files: README.md
+
+Checking for readme file in weekly directory...
+
+Found README in parent directory, named: README.md
+
+Printing contents of README.md:
+**********************************************************************
+# Week 6: Genomics and Bioinformatics
+
+* The sixth week introduced the type of questions that can be addressed with genomic data, and the methodologies that are available for answering these questions. Learning was accomplished through a mix of lectures, computer practicals, and group discussions.
+
+* The **Week6** directory includes the following subdirectories: *code*, *data*, *results*, and *sandbox*.
+    - code - includes all the Week 6 practicals
+    - data - includes the data needed as inputs for the practicals
+    - results - essentially an empty directory, but includes a .gitignore file (since completely empty directories cannnot be pushed to git)
+    - sandbox - similar to a recycle bin; disposing files that are not needed for assessment, but might still be useful for the author if and when needed
+
+## Authors
+
+Jedi (in training): Hovig Artinian
+
+Academic email: ha819@ic.ac.uk
+
+Personal email: artinianhovig@gmail.com
+
+## License
+
+None
+
+## Acknowledgements
+
+Sixth week of Jedi training completed!
+**********************************************************************
+
+Found following files in results directory: .gitignore...
+
+Found 4 code files: Practical1.R, Practical3.R, Practical4.R, Practical2.R
+
+======================================================================
+Testing script/code files...
+
+======================================================================
+Inspecting script file Practical1.R...
+
+File contents are:
+**********************************************************************
+rm(list=ls())
+setwd("~/Documents/CMEECourseWork/Week6/code/")
+
+bearsData = read.csv("../data/bears.csv", header=FALSE, stringsAsFactors = FALSE, colClasses = rep("character", 10000))
+dim(bearsData)
+
+# identifying the columns which contain SNPs
+snps = vector()
+for(i in seq(length(bearsData))){
+  if(length(unique(bearsData[,i])) > 1)
+    snps = c(snps, i)
+}
+
+# creating a subset of columns containing SNPs
+snpData = bearsData[,snps]
+colnames(snpData) = snps
+dim(snpData)
+
+# allele frequencies for each SNP
+alleleFreq = matrix(nrow = 2, ncol = length(snpData))
+for(i in seq(length(snpData))){
+  freq1 = table(snpData[,i])[1]/nrow(snpData)
+  freq2 = table(snpData[,i])[2]/nrow(snpData)
+  alleleFreq[,i] = c(freq1, freq2)
+}
+
+colnames(alleleFreq) = snps
+
+# genotype frequencies for each SNP
+genotypeCounts = matrix(nrow = 3, ncol = length(snpData))
+
+for(i in seq(length(snpData))){
+  
+  count1 = 0
+  count2 = 0
+  count3 = 0
+  
+  for(j in seq(1, nrow(snpData), by = 2)){
+    k = j+1
+    if(length(which(snpData[j:k,i] == unique(snpData[,i])[1])) == 2){
+      count1 = count1 + 1
+    } else if(length(which(snpData[j:k,i] == unique(snpData[,i])[1])) == 1){
+        count2 = count2 + 1
+      } else if(length(which(snpData[j:k,i] == unique(snpData[,i])[1])) == 0){
+        count3 = count3 + 1
+        }
+  }
+  
+  genotypeCounts[,i] = c(count1, count2, count3)
+}
+
+
+    
+    
+**********************************************************************
+
+Testing Practical1.R...
+
+Output (only first 500 characters): 
+
+**********************************************************************
+
+**********************************************************************
+
+Encountered error (or warning):
+Error in setwd("~/Documents/CMEECourseWork/Week6/code/") : 
+  cannot change working directory
+Execution halted
+
+======================================================================
+Inspecting script file Practical3.R...
+
+File contents are:
+**********************************************************************
+rm(list=ls())
+setwd("~/Documents/CMEECourseWork/Week6/code/")
+
+North_Whale_Data = as.matrix(read.csv("../data/killer_whale_North.csv", header = FALSE, stringsAsFactors = FALSE))
+South_Whale_Data = as.matrix(read.csv("../data/killer_whale_South.csv", header = FALSE, stringsAsFactors = FALSE))
+
+# Tajima's estimate
+# calculating pairwise sequences
+North_countMutations = 0
+South_countMutations = 0
+
+for(i in 1:(nrow(North_Whale_Data)-1)){
+  for(k in (i+1):nrow(North_Whale_Data)){
+    North_countMutations = North_countMutations + sum(abs(North_Whale_Data[i,]-North_Whale_Data[k,]))
+  }
+}
+
+for(i in 1:(nrow(South_Whale_Data)-1)){
+  for(k in (i+1):nrow(South_Whale_Data)){
+    South_countMutations = South_countMutations + sum(abs(South_Whale_Data[i,]-South_Whale_Data[k,]))
+  }
+}
+
+North_pi = North_countMutations / ((nrow(North_Whale_Data)*(nrow(North_Whale_Data)-1))/2)
+South_pi = South_countMutations / ((nrow(South_Whale_Data)*(nrow(South_Whale_Data)-1))/2)
+
+North_effPopSize_Tajima = North_pi / (4 * 1e-08 * 50000) # we need to multiply the mutation rate by number of sites because the mutation rate given is per site per generation
+South_effPopSize_Tajima = South_pi / (4 * 1e-08 * 50000)
+
+# Watterson's estimate
+North_snps = vector()
+for(i in 1:ncol(North_Whale_Data)){
+  if(length(unique(North_Whale_Data[,i])) > 1)
+    North_snps = c(North_snps, i)
+}
+
+South_snps = vector()
+for(i in 1:ncol(South_Whale_Data)){
+  if(length(unique(South_Whale_Data[,i])) > 1)
+    South_snps = c(South_snps, i)
+}
+
+denominator = 0
+for(i in 1:(nrow(North_Whale_Data)-1)){
+  denominator = denominator + (1/i)
+}  
+
+North_theta_Watterson = length(North_snps) / denominator
+South_theta_Watterson = length(South_snps) / denominator
+
+North_effPopSize_Watterson = North_theta_Watterson / (4 * 1e-08 * 50000)
+South_effPopSize_Watterson = South_theta_Watterson / (4 * 1e-08 * 50000)
+
+# site frequency spectrum
+North_freq = vector()
+for(i in 1:ncol(North_Whale_Data)){
+  North_freq[i] = length(which(North_Whale_Data[,i] == 1))
+}
+
+North_freq = North_freq[which(North_freq != 0)]
+
+North_sfs = vector()
+for(i in 1:(nrow(North_Whale_Data)-1)){
+  North_sfs = c(North_sfs, length(which(North_freq == i)))
+}
+
+
+South_freq = vector()
+for(i in 1:ncol(South_Whale_Data)){
+  South_freq[i] = length(which(South_Whale_Data[,i] == 1))
+}
+
+South_freq = South_freq[which(South_freq != 0)]
+
+South_sfs = vector()
+for(i in 1:(nrow(South_Whale_Data)-1)){
+  South_sfs = c(South_sfs, length(which(South_freq == i)))
+}
+
+# plot
+barplot(t(cbind(North_sfs,South_sfs)), beside = TRUE, names.arg = 1:19, legend = c("North", "South"))
+  **********************************************************************
+
+Testing Practical3.R...
+
+Output (only first 500 characters): 
+
+**********************************************************************
+
+**********************************************************************
+
+Encountered error (or warning):
+Error in setwd("~/Documents/CMEECourseWork/Week6/code/") : 
+  cannot change working directory
+Execution halted
+
+======================================================================
+Inspecting script file Practical4.R...
+
+File contents are:
+**********************************************************************
+rm(list=ls())
+setwd("~/Documents/CMEECourseWork/Week6/code/")
+
+turtle_Data = as.matrix(read.csv("../data/turtle.csv", header = FALSE))
+turtle_genotype_Data = as.matrix(read.csv("../data/turtle.genotypes.csv", header = FALSE))
+
+calculate_FST = function(pop1, pop2){
+    
+    derived_freq_Pop1 = apply(pop1, 2, sum) / nrow(pop1)
+    ancestral_freq_Pop1 = 1 - derived_freq_Pop1
+    derived_freq_Pop2 = apply(pop2, 2, sum) / nrow(pop2)
+    ancestral_freq_Pop2 = 1 - derived_freq_Pop2
+    
+    F_st = rep(NA, ncol(pop1))
+    for(i in 1:ncol(pop1)){
+      H_Subdivided = ((2 * derived_freq_Pop1[i] * ancestral_freq_Pop1[i]) + (2 * derived_freq_Pop2[i] * ancestral_freq_Pop2[i])) / 2
+      delta_value = abs(derived_freq_Pop1 - derived_freq_Pop2)
+      H_Total = H_Subdivided[i] + (((delta_value[i])^2) / 2)
+
+      F_st[i] = (H_Total - H_Subdivided) / H_Total
+    }
+}
+
+pop_A = turtle_Data[1:20,]
+pop_B = turtle_Data[21:40,]
+pop_C = turtle_Data[41:60,]
+pop_D = turtle_Data[61:80,]**********************************************************************
+
+Testing Practical4.R...
+
+Output (only first 500 characters): 
+
+**********************************************************************
+
+**********************************************************************
+
+Encountered error (or warning):
+Error in setwd("~/Documents/CMEECourseWork/Week6/code/") : 
+  cannot change working directory
+Execution halted
+
+======================================================================
+Inspecting script file Practical2.R...
+
+File contents are:
+**********************************************************************
+rm(list=ls())
+setwd("~/Documents/CMEECourseWork/Week6/code/")
+
+bent_toed_gecko_Data = read.csv("../data/bent-toed_gecko.csv", header=FALSE, stringsAsFactors = FALSE, colClasses = rep("character", 20000))
+leopard_gecko_Data = read.csv("../data/leopard_gecko.csv", header=FALSE, stringsAsFactors = FALSE, colClasses = rep("character", 20000))
+western_banded_gecko_Data = read.csv("../data/western_banded_gecko.csv", header=FALSE, stringsAsFactors = FALSE, colClasses = rep("character", 20000))
+
+# identifying the columns which contain SNPs
+bt_snps = vector()
+for(i in seq(length(bent_toed_gecko_Data))){
+  if(length(unique(bent_toed_gecko_Data[,i])) > 1)
+    bt_snps = c(bt_snps, i) # 62
+}
+
+l_snps = vector()
+for(i in seq(length(leopard_gecko_Data))){
+  if(length(unique(leopard_gecko_Data[,i])) > 1)
+    l_snps = c(l_snps, i) # 47
+}
+
+wb_snps = vector()
+for(i in seq(length(western_banded_gecko_Data))){
+  if(length(unique(western_banded_gecko_Data[,i])) > 1)
+    wb_snps = c(wb_snps, i) # 58
+}
+
+bt_l_gecko_Data = rbind(bent_toed_gecko_Data, leopard_gecko_Data)
+bt_wb_gecko_Data = rbind(bent_toed_gecko_Data, western_banded_gecko_Data)
+l_wb_gecko_Data = rbind(leopard_gecko_Data, western_banded_gecko_Data)
+
+bt_l_Data = bt_l_gecko_Data[,-sort(c(bt_snps, wb_snps))]
+bt_wb_Data = bt_wb_gecko_Data[,-sort(c(bt_snps, wb_snps))]
+l_wb_Data = l_wb_gecko_Data[,-sort(c(l_snps, wb_snps))]
+
+
+
+bt_l_diverged_sites = vector()
+for(i in 1:length(bt_l_Data)){
+  if(length(unique(bt_l_Data[,i]))>1)
+    bt_l_diverged_sites = c(bt_l_diverged_sites, i)
+}
+
+bt_wb_diverged_sites = vector()
+for(i in 1:length(bt_wb_Data)){
+  if(length(unique(bt_wb_Data[,i]))>1)
+    bt_wb_diverged_sites = c(bt_wb_diverged_sites, i)
+}
+
+l_wb_diverged_sites = vector()
+for(i in 1:length(l_wb_Data)){
+  if(length(unique(l_wb_Data[,i]))>1)
+    l_wb_diverged_sites = c(l_wb_diverged_sites, i)
+}
+
+bt_l_genetic_divergence = length(bt_l_diverged_sites) / ncol(bt_l_Data)
+bt_wb_genetic_divergence = length(bt_wb_diverged_sites) / ncol(bt_wb_Data)
+l_wb_genetic_divergence = length(l_wb_diverged_sites) / ncol(l_wb_Data)
+
+
+
+**********************************************************************
+
+Testing Practical2.R...
+
+Output (only first 500 characters): 
+
+**********************************************************************
+
+**********************************************************************
+
+Encountered error (or warning):
+Error in setwd("~/Documents/CMEECourseWork/Week6/code/") : 
+  cannot change working directory
+Execution halted
+
+======================================================================
+======================================================================
+Finished running scripts
+
+Ran into 4 errors
+
+======================================================================
+======================================================================
+
+FINISHED WEEKLY ASSESSMENT
+
+Current Points for the Week = 100
+
+NOTE THAT THESE ARE POINTS, NOT MARKS FOR THE WEEK!

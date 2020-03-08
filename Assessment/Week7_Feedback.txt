@@ -9,11 +9,11 @@ Note that:
 
 ======================================================================
 ======================================================================
-Your Git repo size this week is about 104.07 MiB on disk 
+Your Git repo size this week is about 137.28 MiB on disk 
 
 PART 1: Checking project workflow...
 
-Found the following directories in parent directory: Week6, Week1, Week7, Assessment, Week10, Week5, Week2, Week9, .git, Week3, MiniProject
+Found the following directories in parent directory: Week6, Week1, Week7, Assessment, Week10, Week5, Week2, Week9, Week4, .git, Week3, MiniProject
 
 Found the following files in parent directory: .gitignore, README.md
 
@@ -104,6 +104,65 @@ In the third week, the following sections were covered:
 
 * Biological Computing in R
 
+### Week 4
+
+This directory includes code and data related to the fourth week's practicals/assignments and in-class scripts. 
+
+In the fourth week, the following sections were covered:
+
+* Statistics in R
+* CMEE Miniproject Start
+
+### Week 5
+
+This directory includes code and data related to the fifth week's practicals/assignments and in-class scripts. 
+
+In the fifth week, the following sections were covered:
+
+* Statistics in R
+* Spatial Analyses and GIS
+* CMEE Miniproject Start
+
+### Week 6
+
+This directory includes code and data related to the sixth week's practicals/assignments and in-class scripts. 
+
+In the sixth week, the following sections were covered:
+
+* Genomics and Bioinformatics
+
+### Week 7
+
+This directory includes code and data related to the seventh week's practicals/assignments and in-class scripts. 
+
+In the seventh week, the following sections were covered:
+
+* Biological Computing in Python II
+
+### MiniProject (Week 8)
+
+This directory includes code and data related to the eighth week's practicals/assignments and in-class scripts. 
+
+In the eighth week, the following sections were covered:
+
+* CMEE Miniproject: Hackathon
+
+### Week 9
+
+This directory includes code and data related to the ninth week's practicals/assignments and in-class scripts. 
+
+In the ninth week, the following sections were covered:
+
+* High Performance Computing
+
+### Week 10
+
+This directory includes code and data related to the tenth week's practicals/assignments and in-class scripts. 
+
+In the tenth week, the following sections were covered:
+
+* Biological Data Structures and C
+
 ## Authors
 
 Jedi (in training): Hovig Artinian
@@ -124,7 +183,7 @@ I would like to thank Master Jedi Samraat Pawar for accepting me as his young pa
 ======================================================================
 Looking for the weekly directories...
 
-Found 8 weekly directories: Week1, Week10, Week2, Week3, Week5, Week6, Week7, Week9
+Found 9 weekly directories: Week1, Week10, Week2, Week3, Week4, Week5, Week6, Week7, Week9
 
 The Week7 directory will be assessed 
 
@@ -161,29 +220,36 @@ Printing contents of README.md:
 
 #### In-class scripts
 
-* profileme.py - Some functions to explain the concept of profiling in Python
-* profileme2.py - Some functions to explain the concept of profiling in Python. Improving the functions in `profileme.py` to make them less time-consuming
-* timeitme.py - Comparing run time for using loops vs list comprehensions and loops vs the join method utilizing the timeit module
-* Nets.R - Visualizing the QMEE CDT collaboration network, coloring the nodes by the type of organization
 * fmr.R - Plotting log(field metabolic rate) against log(body mass) for the Nagy et al 1999 dataset to a pdf file
+* Nets.R - Visualizing the QMEE CDT collaboration network, coloring the nodes by the type of organization
+* profileme2.py - Some functions to explain the concept of profiling in Python. Improving the functions in `profileme.py` to make them less time-consuming
+* profileme.py - Some functions to explain the concept of profiling in Python
 * regexs.py - Various usage of regex functions in python
+* TestR.py - Python script that runs `TestR.R` using the `subprocess` module
 * TestR.R - test R script to be used in python
-* TestR.py - test python script that runs `TestR.R` using the `subprocess` module
+* timeitme.py - Comparing run time for using loops vs list comprehensions and loops vs the join method utilizing the timeit module
 
 #### Practicals
 
+* blackbirds.py - Printing out Kingdom, Phylum, and Species names for each species found in the `blackbirds.txt` file
+* DrawFW.py - Building a food web network by generating an adjacency list and a matrix of species names/ids and properties, and saving the network plot to a pdf file
 * LV1.py - Calculating the consumer-resource population growth rate and producing two different plots using both consumer and resource density curves
 * LV2.py - Similar to `LV1.py` with the addition of prey density dependence in the model
 * LV3.py - A discrete-time version of the Lotka-Volterra model implemented in `LV2.py`
 * LV4.py - A version of the discrete-time model, implemented in `LV3.py`, simulation with a random gaussian fluctuation in resource's growth rate at each time-step
-* DrawFW.py - Building a food web network by generating an adjacency list and a matrix of species names/ids and properties, and saving the network plot to a pdf file
 * Nets.py - A python version of the network created in `Nets.R`
-* blackbirds.py - Printing out Kingdom, Phylum, and Species names for each species found in the `blackbirds.txt` file
-* using_os.py
-
+* run_fmr_R.py - Python script that runs `fmr.R` using the `subprocess` module
+* run_LV.py - Runs and profiles LV1.py, LV2.py, LV3.py, and LV4.py and prints results to the screen
+* using_os.py - Using the subprocess.os module to get a list of files and directories in my ubuntu home directory
 
 
 ### Data
+
+* blackbirds.txt - includes taxonomic hierarchy information of several bird species and is used in the `blackbirds.py` script
+* NagyEtAl1999.csv - a dataset taken from Nagy et al 1999 that includes information about the field metabolic rates and body masses of several species and is used in the `fmr.R` script
+* QMEE_Net_Mat_edges.csv - contains information on network edges used to build the QMEE CDT collaboration network
+* QMEE_Net_Mat_nodes.csv - contains information on network nodes used to build the QMEE CDT collaboration network
+
 
 ## Authors
 
@@ -205,7 +271,7 @@ Seventh week of Jedi training completed!
 Found following files in results directory: TestR.Rout, LV1_model.pdf, fmr_plot.pdf, LV2_model.pdf, LV4_model.pdf, fmr.Rout, DrawFW.pdf, .gitignore, LV3_model.pdf, fmr_errFile.Rout, TestR_errFile.Rout, QMEENet.svg...
 ideally, Results directory should be empty other than, perhaps, a readme. 
 
-Found 18 code files: TestR.py, regexs.py, LV3.py, profileme2.py, timeitme.py, blackbirds.py, Nets.py, TestR.R, profileme.py, LV4.py, fmr.R, LV1.py, DrawFW.py, Nets.R, run_fmr_R.py, LV2.py, MyFirstJupyterNb-checkpoint.ipynb, SymPy-checkpoint.ipynb
+Found 18 code files: TestR.py, regexs.py, LV3.py, profileme2.py, timeitme.py, blackbirds.py, Nets.py, TestR.R, profileme.py, LV4.py, fmr.R, using_os.py, LV1.py, DrawFW.py, Nets.R, run_fmr_R.py, LV2.py, run_LV.sh
 
 ======================================================================
 Testing script/code files...
@@ -215,7 +281,18 @@ Inspecting script file TestR.py...
 
 File contents are:
 **********************************************************************
+#!/usr/bin/env python3
+
+"""Python script that runs TestR.R using the subprocess module"""
+
+__appname__ = 'TestR.py'
+__author__ = 'Hovig Artinian (ha819@imperial.ac.uk)'
+__version__ = '0.0.1'
+__license__ = 'None'
+
+## imports ##
 import subprocess
+
 subprocess.Popen("Rscript --verbose TestR.R > ../results/TestR.Rout 2> ../results/TestR_errFile.Rout", shell=True).wait()
 **********************************************************************
 
@@ -225,10 +302,9 @@ TestR.py is a Python script file;
 
 checking for docstrings...
 
-No functions, but no script-level docstring either
-2 pts deducted
+Found no functions, but one docstring for the script, good
 
-Current Points = 98
+Current Points = 100
 
 Output (only first 500 characters): 
 
@@ -238,7 +314,7 @@ Output (only first 500 characters):
 
 Code ran without errors
 
-Time consumed = 0.18092s
+Time consumed = 0.13089s
 
 ======================================================================
 Inspecting script file regexs.py...
@@ -344,7 +420,7 @@ checking for docstrings...
 
 Found no functions, but one docstring for the script, good
 
-Current Points = 98
+Current Points = 100
 
 Output (only first 500 characters): 
 
@@ -357,7 +433,7 @@ found a match: an
 
 Code ran without errors
 
-Time consumed = 0.02865s
+Time consumed = 0.03365s
 
 ======================================================================
 Inspecting script file LV3.py...
@@ -476,10 +552,14 @@ def main(argv):
         print("Sufficient number of parameters provided... taking first four values...")
     
     # run the model
+    print("Running the model...")
     RC_t(t, R, C)
 
     # create and save plots to pdf
+    print("Creating and saving plots to pdf...")
     plots(t, R, C).savefig('../results/LV3_model.pdf')
+
+    print("Done!")
 
     return 0
 
@@ -496,18 +576,21 @@ checking for docstrings...
 
 Found one or more docstrings and functions
 
-Current Points = 98
+Current Points = 100
 
 Output (only first 500 characters): 
 
 **********************************************************************
 No input parameters provided... assigning default values...
+Running the model...
+Creating and saving plots to pdf...
+Done!
 
 **********************************************************************
 
 Code ran without errors
 
-Time consumed = 0.71894s
+Time consumed = 0.73365s
 
 ======================================================================
 Inspecting script file profileme2.py...
@@ -565,7 +648,7 @@ checking for docstrings...
 
 Found one or more docstrings and functions
 
-Current Points = 98
+Current Points = 100
 
 Output (only first 500 characters): 
 
@@ -576,7 +659,7 @@ Output (only first 500 characters):
 
 Code ran without errors
 
-Time consumed = 3.80329s
+Time consumed = 3.79452s
 
 ======================================================================
 Inspecting script file timeitme.py...
@@ -624,7 +707,7 @@ checking for docstrings...
 
 Found no functions, but one docstring for the script, good
 
-Current Points = 98
+Current Points = 100
 
 Output (only first 500 characters): 
 
@@ -634,7 +717,7 @@ Output (only first 500 characters):
 
 Code ran without errors
 
-Time consumed = 10.00760s
+Time consumed = 10.00903s
 
 ======================================================================
 Inspecting script file blackbirds.py...
@@ -692,7 +775,7 @@ checking for docstrings...
 
 Found no functions, but one docstring for the script, good
 
-Current Points = 98
+Current Points = 100
 
 Output (only first 500 characters): 
 
@@ -722,7 +805,7 @@ Species - Agelaius assimilis
 
 Code ran without errors
 
-Time consumed = 0.02930s
+Time consumed = 0.02980s
 
 ======================================================================
 Inspecting script file Nets.py...
@@ -818,7 +901,7 @@ checking for docstrings...
 
 Found one or more docstrings and functions
 
-Current Points = 98
+Current Points = 100
 
 Output (only first 500 characters): 
 
@@ -837,7 +920,8 @@ Inspecting script file TestR.R...
 
 File contents are:
 **********************************************************************
-print("Hello, this is R!")**********************************************************************
+print("Hello, this is R!")
+**********************************************************************
 
 Testing TestR.R...
 
@@ -850,7 +934,7 @@ Output (only first 500 characters):
 
 Code ran without errors
 
-Time consumed = 0.09241s
+Time consumed = 0.09721s
 
 ======================================================================
 Inspecting script file profileme.py...
@@ -902,7 +986,7 @@ checking for docstrings...
 
 Found one or more docstrings and functions
 
-Current Points = 98
+Current Points = 100
 
 Output (only first 500 characters): 
 
@@ -913,7 +997,7 @@ Output (only first 500 characters):
 
 Code ran without errors
 
-Time consumed = 6.42503s
+Time consumed = 7.14878s
 
 ======================================================================
 Inspecting script file LV4.py...
@@ -1032,10 +1116,14 @@ def main(argv):
         print("Sufficient number of parameters provided... taking first four values...")
     
     # run the model
+    print("Running the model...")
     RC_t(t, R, C)
 
     # create and save plots to pdf
+    print("Creating and saving plots to pdf...")
     plots(t, R, C).savefig('../results/LV4_model.pdf')
+
+    print("Done!")
 
     return 0
 
@@ -1052,18 +1140,21 @@ checking for docstrings...
 
 Found one or more docstrings and functions
 
-Current Points = 98
+Current Points = 100
 
 Output (only first 500 characters): 
 
 **********************************************************************
 No input parameters provided... assigning default values...
+Running the model...
+Creating and saving plots to pdf...
+Done!
 
 **********************************************************************
 
 Code ran without errors
 
-Time consumed = 0.69571s
+Time consumed = 0.94042s
 
 ======================================================================
 Inspecting script file fmr.R...
@@ -1107,7 +1198,100 @@ Finished in R!
 
 Code ran without errors
 
-Time consumed = 0.17949s
+Time consumed = 0.18439s
+
+======================================================================
+Inspecting script file using_os.py...
+
+File contents are:
+**********************************************************************
+#!/usr/bin/env python3
+
+"""Using the subprocess.os module to get a list of files and directories in my ubuntu home directory"""
+
+__appname__ = 'using_os.py'
+__author__ = 'Hovig Artinian (ha819@imperial.ac.uk)'
+__version__ = '0.0.1'
+__license__ = 'None'
+
+# Use the subprocess.os module to get a list of files and  directories 
+# in your ubuntu home directory 
+
+# Hint: look in subprocess.os and/or subprocess.os.path and/or 
+# subprocess.os.walk for helpful functions
+
+## imports ##
+import subprocess
+
+#################################
+# Get a list of files and directories in your home/ that start with an uppercase 'C'
+
+# Get the user's home directory.
+home = subprocess.os.path.expanduser("~")
+
+# Create a list to store the results.
+FilesDirsStartingWithC = []
+
+# Use a for loop to walk through the home directory.
+for (root, dirs, files) in subprocess.os.walk(home, topdown=True):
+    for string in subprocess.os.listdir(root): # loops over the list of files and subdirectories in the current directory
+        if(string.startswith('C')): # only takes files and directories that start with an upper case 'C'
+            FilesDirsStartingWithC.append(string)
+
+print("Files and directories that start with an uppercase 'C':")
+print(list(set(FilesDirsStartingWithC)))
+print("\n")
+#################################
+# Get files and directories in your home/ that start with either an 
+# upper or lower case 'C'
+
+# Type your code here:
+FilesDirsStartingWithC = []
+
+for (root, dirs, files) in subprocess.os.walk(home, topdown=True):
+    for string in subprocess.os.listdir(root):
+        if(string.startswith('C') or string.startswith('c')): # only takes files and directories that start with either an upper or lower case 'C'
+            FilesDirsStartingWithC.append(string)
+
+print("Files and directories that start with either an upper or lower case 'C':")
+print(list(set(FilesDirsStartingWithC)))
+print("\n")
+#################################
+# Get only directories in your home/ that start with either an upper or 
+#~lower case 'C' 
+
+# Type your code here:
+FilesDirsStartingWithC = []
+
+for (root, dirs, files) in subprocess.os.walk(home, topdown=True):
+        for string in dirs: # loops over the directories only so that we don't take the files into account
+            if(string.startswith('C') or string.startswith('c')): # only takes directories that start with either an upper or lower case 'C'
+                FilesDirsStartingWithC.append(string)
+
+print("Directories that start with either an upper or lower case 'C':")
+print(list(set(FilesDirsStartingWithC)))
+**********************************************************************
+
+Testing using_os.py...
+
+using_os.py is a Python script file;
+
+checking for docstrings...
+
+Found no functions, but one docstring for the script, good
+
+Current Points = 100
+
+Output (only first 500 characters): 
+
+**********************************************************************
+Files and directories that start with an uppercase 'C':
+['CholGax.m', 'Camara_Daniel_CV_Dec2018 - Daniel Câmara.pdf', 'CMEE_MREs_Mid-project_Marking_Schedule.pdf', 'CMEE-4.pdf', 'Costarica_Fig.JPG', 'ConsistencyResampling', 'Cluster_run_iteration_45_.rda', 'Chlorophyta.jpg', 'Completed Reviewer Form_139865698.pdf', 'Cox_1998_Journal of Biogeography.pdf', 'CRC', 'Copy of M21_3.4_TJ_Storing Energy_dev Simon Foster.gddoc', 'Copy of WIP tech brief G7 Volcano Builder Interactive_RB.gddoc', 'CEA879FC35
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 10.00411s
 
 ======================================================================
 Inspecting script file LV1.py...
@@ -1191,7 +1375,7 @@ checking for docstrings...
 
 Found one or more docstrings and functions
 
-Current Points = 98
+Current Points = 100
 
 Output (only first 500 characters): 
 
@@ -1203,7 +1387,7 @@ Succesfully created and saved plots!
 
 Code ran without errors
 
-Time consumed = 0.77530s
+Time consumed = 0.81406s
 
 ======================================================================
 Inspecting script file DrawFW.py...
@@ -1280,7 +1464,7 @@ checking for docstrings...
 
 Found one or more docstrings and functions
 
-Current Points = 98
+Current Points = 100
 
 Output (only first 500 characters): 
 
@@ -1301,7 +1485,7 @@ Inspecting script file Nets.R...
 
 File contents are:
 **********************************************************************
-library(igraph) # Load the igraph package
+library(igraph, quietly = TRUE, warn.conflicts = FALSE) # Load the igraph package
 
 rm(list = ls())
 
@@ -1368,32 +1552,35 @@ null device
 
 **********************************************************************
 
-Encountered error (or warning):
-Loading required package: methods
+Code ran without errors
 
-Attaching package: ‘igraph’
-
-The following objects are masked from ‘package:stats’:
-
-    decompose, spectrum
-
-The following object is masked from ‘package:base’:
-
-    union
-
+Time consumed = 0.39740s
 
 ======================================================================
 Inspecting script file run_fmr_R.py...
 
 File contents are:
 **********************************************************************
+#!/usr/bin/env python3
+
+"""Python script that runs fmr.R using the subprocess module"""
+
+__appname__ = 'run_fmr_R.py'
+__author__ = 'Hovig Artinian (ha819@imperial.ac.uk)'
+__version__ = '0.0.1'
+__license__ = 'None'
+
+## imports ##
 import subprocess
 
 p = subprocess.Popen(["Rscript --verbose fmr.R > ../results/fmr.Rout 2> ../results/fmr_errFile.Rout"], stdout = subprocess.PIPE, stderr = subprocess.PIPE, shell=True)
 stdout, stderr = p.communicate()
 
 if stderr == b'':
-    print("R script ran successfully!")
+    print("R script ran successfully!\n")
+
+print("The contents of the R console output while running the R script:")
+print(open("../results/fmr.Rout").read())
 **********************************************************************
 
 Testing run_fmr_R.py...
@@ -1402,21 +1589,28 @@ run_fmr_R.py is a Python script file;
 
 checking for docstrings...
 
-No functions, but no script-level docstring either
-2 pts deducted
+Found no functions, but one docstring for the script, good
 
-Current Points = 96
+Current Points = 100
 
 Output (only first 500 characters): 
 
 **********************************************************************
 R script ran successfully!
 
+The contents of the R console output while running the R script:
+Reading CSV
+Creating graph
+null device 
+          1 
+Finished in R!
+
+
 **********************************************************************
 
 Code ran without errors
 
-Time consumed = 0.20451s
+Time consumed = 0.20597s
 
 ======================================================================
 Inspecting script file LV2.py...
@@ -1546,7 +1740,7 @@ def main(argv):
     
     # saving the figure to a pdf file
     plots(t, pops).savefig('../results/LV2_model.pdf')
-
+        
     return 0
 
 if (__name__ == "__main__"):
@@ -1562,7 +1756,7 @@ checking for docstrings...
 
 Found one or more docstrings and functions
 
-Current Points = 96
+Current Points = 100
 
 Output (only first 500 characters): 
 
@@ -1576,226 +1770,120 @@ The final value of the consumer population density curve is 6
 
 Code ran without errors
 
-Time consumed = 0.73506s
+Time consumed = 0.74594s
 
 ======================================================================
-Inspecting script file MyFirstJupyterNb-checkpoint.ipynb...
+Inspecting script file run_LV.sh...
 
 File contents are:
 **********************************************************************
-{
- "cells": [
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  }
- ],
- "metadata": {
-  "kernelspec": {
-   "display_name": "Python 3",
-   "language": "python",
-   "name": "python3"
-  }
- },
- "nbformat": 4,
- "nbformat_minor": 2
-}
+#!/bin/bash 
+# Author: Hovig Artinian ha819@imperial.ac.uk
+# Script: run_Vectorize.sh
+# Desc: runs and profiles LV1.py, LV2.py, LV3.py, and LV4.py
+# Arguments: None
+# Date: Oct 2019
+
+# First, run the scripts
+echo -e "\nRunning LV1.py...\n"
+python3 LV1.py
+if [ $? ] # If script runs successfully, the stored value of $? will be 0, which makes the if statement TRUE
+then
+    echo -e "\nScript ran successfully!\n"
+else
+    echo -e "\nScript failed to run :(\n"
+fi
+
+echo -e "Running LV2.py...\n"
+python3 LV2.py
+if [ $? ]
+then
+    echo -e "\nScript ran successfully!\n"
+else
+    echo -e "\nScript failed to run :(\n"
+fi
+
+echo -e "Running LV3.py...\n"
+python3 LV3.py
+if [ $? ]
+then
+    echo -e "\nScript ran successfully!\n"
+else
+    echo -e "\nScript failed to run :(\n"
+fi
+
+echo -e "Running LV4.py...\n"
+python3 LV4.py
+if [ $? ]
+then
+    echo -e "\nScript ran successfully!\n"
+else
+    echo -e "Script failed to run :(\n"
+fi
+
+# Now, onto profiling
+echo 'Profiling LV1.py :' > ../results/profiling.txt
+python3 -m cProfile LV1.py >> LV1.txt && sed '3q;d' LV1.txt >> ../results/profiling.txt
+echo 'Profiling LV2.py :' >> ../results/profiling.txt
+python3 -m cProfile LV2.py >> LV2.txt && sed '5q;d' LV2.txt >> ../results/profiling.txt 
+echo 'Profiling LV3.py :' >> ../results/profiling.txt
+python3 -m cProfile LV3.py >> LV3.txt && sed '5q;d' LV3.txt >> ../results/profiling.txt
+echo 'Profiling LV4.py :' >> ../results/profiling.txt
+python3 -m cProfile LV4.py >> LV4.txt && sed '5q;d' LV4.txt >> ../results/profiling.txt
+
+rm LV1.txt LV2.txt LV3.txt LV4.txt
+
+#Print results to screen
+sed 's/^[ \t]*//;s/[ \t]*$/ /' < ../results/profiling.txt | sed '$!N;s/\n//' 
+# first sed command strips all whitespaces from the beginning of each line in the file
+# second sed command combines every two consecutive lines together
 **********************************************************************
 
-Testing MyFirstJupyterNb-checkpoint.ipynb...
+Testing run_LV.sh...
 
-======================================================================
-Inspecting script file SymPy-checkpoint.ipynb...
+Output (only first 500 characters): 
 
-File contents are:
-**********************************************************************
-{
- "cells": [
-  {
-   "cell_type": "code",
-   "execution_count": 3,
-   "metadata": {},
-   "outputs": [],
-   "source": [
-    "%matplotlib inline\n",
-    "import matplotlib.pyplot as p"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 5,
-   "metadata": {},
-   "outputs": [],
-   "source": [
-    "from sympy import *\n",
-    "import scipy as sc\n",
-    "init_printing()"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 6,
-   "metadata": {},
-   "outputs": [
-    {
-     "data": {
-      "text/plain": [
-       "sympy.core.symbol.Symbol"
-      ]
-     },
-     "execution_count": 6,
-     "metadata": {},
-     "output_type": "execute_result"
-    }
-   ],
-   "source": [
-    "x = var('x')\n",
-    "type(x) #checking its class"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 7,
-   "metadata": {},
-   "outputs": [],
-   "source": [
-    "a, b, c = var(\"a, b, c\")"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 8,
-   "metadata": {},
-   "outputs": [],
-   "source": [
-    "x = var('x', real=True)"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 9,
-   "metadata": {},
-   "outputs": [
-    {
-     "data": {
-      "text/plain": [
-       "False"
-      ]
-     },
-     "execution_count": 9,
-     "metadata": {},
-     "output_type": "execute_result"
-    }
-   ],
-   "source": [
-    "x.is_imaginary"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 10,
-   "metadata": {},
-   "outputs": [],
-   "source": [
-    "x = Symbol('x', positive=True)"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 11,
-   "metadata": {},
-   "outputs": [
-    {
-     "data": {
-      "image/png": "iVBORw0KGgoAAAANSUhEUgAAACoAAAAPBAMAAABgjEDtAAAAMFBMVEX///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAv3aB7AAAAD3RSTlMA782r3SJ2ZjIQmUS7VIlAnjihAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAwElEQVQYGWNg/GQs72z0hQEVMAYw5BcwNKIKMsxiAIkyo4mGg0XZJqAKR4BFOUCi0Q2c3QFwWaAJ3Iq5j0LXH+A9n8DAuvwxWAooysC4dn4B0wEG/gSGLRO4JUEaQKJMDgwMPGBROQYGMaAgRNQAKsrxq7zcHC66ACrK+xckBARgEx7A1H4DiyFEmQ8wxCcwODEwTIOpZVnAwMAuwHDxJEP/BYaVDAzca+RlVnCf/3OBgeFd2hSRCZxWeROghqBRAGPPN8vbJxBHAAAAAElFTkSuQmCC\n",
-      "text/latex": [
-       "$$\\mathrm{True}$$"
-      ],
-      "text/plain": [
-       "True"
-      ]
-     },
-     "execution_count": 11,
-     "metadata": {},
-     "output_type": "execute_result"
-    }
-   ],
-   "source": [
-    "x > 0"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 12,
-   "metadata": {},
-   "outputs": [
-    {
-     "data": {
-      "image/png": "iVBORw0KGgoAAAANSUhEUgAAAC0AAAAPBAMAAACCUFuUAAAAMFBMVEX///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAv3aB7AAAAD3RSTlMAMqvdmc0Qu+8iZlR2iUR1i74cAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAA+UlEQVQYGWMQsv/kovo/gQEIhGJBJAzIFzAwSAiAeGxNMDEQPV+BgYFrA1ikCExCCZA42wEGEEAXn8ZwAav4SgaGPWcPgNQznl4TwDBlrSZQGdCcSgZuSwYnkHg6A4MBnxnDiwSgeIvGTwbuRob3CUBxoMABjgsMHEDNQPVAbYxn/ScAxZm/n2SQ91q1aAFYfCUDW/gEeZA429X/Dvshjga5k4HdgEF+GlB8GgPXP3mgIUAAFue/wLB/nkARwxsGBi3mAAa2AwwM8goMDAwcBQz3pRLA9lYy/mZgSWCYYv/dk4GBU+VsTpTQf823a9Y+YEjyuQZUih0AAHGBRtIqn6whAAAAAElFTkSuQmCC\n",
-      "text/latex": [
-       "$$\\mathrm{False}$$"
-      ],
-      "text/plain": [
-       "False"
-      ]
-     },
-     "execution_count": 12,
-     "metadata": {},
-     "output_type": "execute_result"
-    }
-   ],
-   "source": [
-    "x < 0"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  }
- ],
- "metadata": {
-  "kernelspec": {
-   "display_name": "Python 3",
-   "language": "python",
-   "name": "python3"
-  },
-  "language_info": {
-   "codemirror_mode": {
-    "name": "ipython",
-    "version": 3
-   },
-   "file_extension": ".py",
-   "mimetype": "text/x-python",
-   "name": "python",
-   "nbconvert_exporter": "python",
-   "pygments_lexer": "ipython3",
-   "version": "3.6.8"
-  }
- },
- "nbformat": 4,
- "nbformat_minor": 2
-}
 **********************************************************************
 
-Testing SymPy-checkpoint.ipynb...
+Running LV1.py...
+
+Integration successful.
+Succesfully created and saved plots!
+
+Script ran successfully!
+
+Running LV2.py...
+
+No input parameters provided... assigning default values...
+Integration successful.
+The final value of the resource population density curve is 20
+The final value of the consumer population density curve is 6
+
+Script ran successfully!
+
+Running LV3.py...
+
+No input parameters provided... assigning default values...
+Running the model...
+Creating and saving plots to pdf...
+Do
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 6.89059s
 
 ======================================================================
 ======================================================================
 Finished running scripts
 
-Ran into 3 errors
+Ran into 2 errors
 
 ======================================================================
 ======================================================================
 
 FINISHED WEEKLY ASSESSMENT
 
-Current Points for the Week = 96
+Current Points for the Week = 100
 
 NOTE THAT THESE ARE POINTS, NOT MARKS FOR THE WEEK!

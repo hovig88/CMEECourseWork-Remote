@@ -9,11 +9,11 @@ Note that:
 
 ======================================================================
 ======================================================================
-Your Git repo size this week is about 2.87 MiB on disk 
+Your Git repo size this week is about 137.28 MiB on disk 
 
 PART 1: Checking project workflow...
 
-Found the following directories in parent directory: Week1, Assessment, Week2, .git
+Found the following directories in parent directory: Week6, Week1, Week7, Assessment, Week10, Week5, Week2, Week9, Week4, .git, Week3, MiniProject
 
 Found the following files in parent directory: .gitignore, README.md
 
@@ -23,8 +23,46 @@ Found .gitignore in parent directory, great!
 
 Printing contents of .gitignore:
 **********************************************************************
-*~ 
+*~
 *.tmp
+__pycache__/
+
+# History files
+.Rhistory
+.Rapp.history
+
+# Session Data files
+.RData
+
+# User-specific files
+.Ruserdata
+
+# Example code in package build process
+*-Ex.R
+
+# Output files from R CMD build
+/*.tar.gz
+
+# Output files from R CMD check
+/*.Rcheck/
+
+# RStudio files
+.Rproj.user/
+
+# produced vignettes
+vignettes/*.html
+vignettes/*.pdf
+
+# OAuth2 token, see https://github.com/hadley/httr/releases/tag/v0.3
+.httr-oauth
+
+# knitr and R markdown default cache directories
+*_cache/
+/cache/
+
+# Temporary files created by R markdown
+*.utf8.md
+*.knit.md
 **********************************************************************
 
 Found README in parent directory, named: README.md
@@ -33,7 +71,7 @@ Printing contents of README.md:
 **********************************************************************
 # Computational Methods in Ecology and Evolution (CMEE) Masters Program
 
-* This repository includes scripts and programs for weekly practicals/assignments required for the partial completion of the CMEE Masters program.
+* This repository includes weekly practicals/assignments and in-class scripts required for the partial completion of the CMEE Masters program.
 
 * The **CMEECourseWork-Remote** directory contains a `.gitignore` file and subdirectories named as `Week1`, `Week2`,...etc. This will be updated weekly as the course progresses. 
 
@@ -41,7 +79,7 @@ Printing contents of README.md:
 
 ### Week 1
 
-This directory includes scripts/commands and data related to the first week's practicals/assignments. 
+This directory includes code and data related to the first week's practicals/assignments and in-class scripts. 
 
 In the first week, the following sections were covered:
 
@@ -49,6 +87,81 @@ In the first week, the following sections were covered:
 * Shell scripting
 * Version control with Git
 * Scientific documents with LaTeX
+
+### Week 2
+
+This directory includes code and data related to the second week's practicals/assignments and in-class scripts. 
+
+In the second week, the following sections were covered:
+
+* Biological computing in Python I
+
+### Week 3
+
+This directory includes code and data related to the third week's practicals/assignments and in-class scripts. 
+
+In the third week, the following sections were covered:
+
+* Biological Computing in R
+
+### Week 4
+
+This directory includes code and data related to the fourth week's practicals/assignments and in-class scripts. 
+
+In the fourth week, the following sections were covered:
+
+* Statistics in R
+* CMEE Miniproject Start
+
+### Week 5
+
+This directory includes code and data related to the fifth week's practicals/assignments and in-class scripts. 
+
+In the fifth week, the following sections were covered:
+
+* Statistics in R
+* Spatial Analyses and GIS
+* CMEE Miniproject Start
+
+### Week 6
+
+This directory includes code and data related to the sixth week's practicals/assignments and in-class scripts. 
+
+In the sixth week, the following sections were covered:
+
+* Genomics and Bioinformatics
+
+### Week 7
+
+This directory includes code and data related to the seventh week's practicals/assignments and in-class scripts. 
+
+In the seventh week, the following sections were covered:
+
+* Biological Computing in Python II
+
+### MiniProject (Week 8)
+
+This directory includes code and data related to the eighth week's practicals/assignments and in-class scripts. 
+
+In the eighth week, the following sections were covered:
+
+* CMEE Miniproject: Hackathon
+
+### Week 9
+
+This directory includes code and data related to the ninth week's practicals/assignments and in-class scripts. 
+
+In the ninth week, the following sections were covered:
+
+* High Performance Computing
+
+### Week 10
+
+This directory includes code and data related to the tenth week's practicals/assignments and in-class scripts. 
+
+In the tenth week, the following sections were covered:
+
+* Biological Data Structures and C
 
 ## Authors
 
@@ -70,7 +183,7 @@ I would like to thank Master Jedi Samraat Pawar for accepting me as his young pa
 ======================================================================
 Looking for the weekly directories...
 
-Found 2 weekly directories: Week1, Week2
+Found 9 weekly directories: Week1, Week10, Week2, Week3, Week4, Week5, Week6, Week7, Week9
 
 The Week1 directory will be assessed 
 
@@ -83,7 +196,7 @@ Assessing WEEK1...
 
 Found the following directories: code, sandbox, data, results
 
-Found the following files: .gitignore, README.md
+Found the following files: README.md
 
 Checking for readme file in weekly directory...
 
@@ -95,11 +208,11 @@ Printing contents of README.md:
 
 * The first week was an induction to the CMEE Masters program and an introduction to the Unix environment, shell scripting, version control with git, and typesetting with LaTeX.
 
-* The **Week1** directory includes a `.gitignore` file and the following subdirectories: *Code*, *Data*, *Results*, and *Sandbox*.
-    - Code - includes all the scripts and commands related to the Week 1 practicals/assignments
-    - Data - includes the data needed as inputs for some of the scripts/commands
-    - Results - essentially an empty directory, but includes an empty `.keep` file (since completely empty directories cannnot be pushed to git)
-    - Sandbox - similar to a recycle bin; disposing files that are not needed for assessment, but might still be useful for the author if and when needed
+* The **Week1** directory includes the following subdirectories: *code*, *data*, *results*, and *sandbox*.
+    - code - includes all the Week 1 practicals/assignments and in-class scripts
+    - data - includes the data needed as inputs for some of the scripts/commands
+    - results - essentially an empty directory, but includes a .gitignore file (since completely empty directories cannnot be pushed to git)
+    - sandbox - similar to a recycle bin; disposing files that are not needed for assessment, but might still be useful for the author if and when needed
 
 ## Contents
 
@@ -148,7 +261,7 @@ None
 First week of Jedi training completed!
 **********************************************************************
 
-Found following files in results directory: .keep...
+Found following files in results directory: .gitignore...
 
 Found 13 code files: ConcatenateTwoFiles.sh, CountLines.sh, variables.sh, CompileLaTeX.sh, tiff2png.sh, csvtospace.sh, FirstExample.tex, MyExampleScript.sh, FirstBiblio.bib, UnixPrac1.txt, tabtocsv.sh, .txt.txt, boilerplate.sh
 
@@ -172,11 +285,19 @@ File contents are:
 # Arguments: 1 -> input file 1; 2 -> input file 2; 3 -> merged file
 # Date: Oct 2019
 
-cat $1 > $3
-cat $2 >> $3
-echo "Merged File is"
-cat $3
+# handling input parameters
+if [ -z $1 ] || [ -z $2 ] || [ -z $3 ]
+then 
+    echo "Please input 3 file names..."
+    echo "Script did not execute." 
+    exit 
+fi
 
+cat $1 > $3 # adds contents of file 1 to empty file 3
+cat $2 >> $3 # appends contents of file 2 to file 3
+echo -e "\nMerged File is:\n"
+cat $3 # prints out contents of file 3
+echo -e "\n"
 **********************************************************************
 
 Testing ConcatenateTwoFiles.sh...
@@ -184,13 +305,14 @@ Testing ConcatenateTwoFiles.sh...
 Output (only first 500 characters): 
 
 **********************************************************************
-Merged File is
+Please input 3 file names...
+Script did not execute.
 
 **********************************************************************
 
-Encountered error (or warning):
-ConcatenateTwoFiles.sh: line 8: $3: ambiguous redirect
-ConcatenateTwoFiles.sh: line 9: $3: ambiguous redirect
+Code ran without errors
+
+Time consumed = 0.00675s
 
 ======================================================================
 Inspecting script file CountLines.sh...
@@ -204,10 +326,18 @@ File contents are:
 # Arguments: 1 -> input file
 # Date: Oct 2019
 
-NumLines=`wc -l < $1`
-echo "The file $1 has $NumLines lines"
-echo
+# handling input parameters
+if [ -z $1 ]
+then 
+    echo "Please input a file name..."
+    echo "Script did not execute."
+    exit 
+fi
 
+NumLines=`wc -l < $1` # counts number of lines and stores value in NumLines
+filename=`basename $1`
+
+echo -e "\nThe file ${filename} has $NumLines lines.\n"
 **********************************************************************
 
 Testing CountLines.sh...
@@ -215,13 +345,14 @@ Testing CountLines.sh...
 Output (only first 500 characters): 
 
 **********************************************************************
-The file  has  lines
-
+Please input a file name...
+Script did not execute.
 
 **********************************************************************
 
-Encountered error (or warning):
-CountLines.sh: line 8: $1: ambiguous redirect
+Code ran without errors
+
+Time consumed = 0.00678s
 
 ======================================================================
 Inspecting script file variables.sh...
@@ -237,18 +368,31 @@ File contents are:
 
 # Shows the use of variables
 MyVar="some string"
-echo "the current value of the variable is" $MyVar
+echo "the current value of the variable is:" $MyVar
 echo "Please enter a new string"
 read MyVar
-echo "the current value of the variable is" $MyVar
+
+if [ -z $MyVar ]
+then
+    echo -e "No input string provided...\n"
+else
+    echo "the current value of the variable is:" $MyVar
+fi
 
 ## Reading multiple values
-echo "Enter two numbers separated by space(s)"
+echo -e "\nEnter two numbers separated by space(s)"
 read a b
-echo "you entered" $a "and" $b ". Their sum is:"
-mysum=`expr $a + $b`
-echo $mysum
 
+if [ -z $a ] || [ -z $b ]
+then
+    echo "There were no input numbers provided..." 
+    echo "No calculation occured."
+    exit
+else
+    echo "you entered" $a "and" $b ". Their sum is:"
+    mysum=`expr $a + $b`
+    echo $mysum
+fi
 **********************************************************************
 
 Testing variables.sh...
@@ -256,17 +400,20 @@ Testing variables.sh...
 Output (only first 500 characters): 
 
 **********************************************************************
-the current value of the variable is some string
+the current value of the variable is: some string
 Please enter a new string
-the current value of the variable is
-Enter two numbers separated by space(s)
-you entered and . Their sum is:
+No input string provided...
 
+
+Enter two numbers separated by space(s)
+There were no input numbers provided...
+No calculation occured.
 
 **********************************************************************
 
-Encountered error (or warning):
-expr: syntax error
+Code ran without errors
+
+Time consumed = 0.00517s
 
 ======================================================================
 Inspecting script file CompileLaTeX.sh...
@@ -279,6 +426,22 @@ File contents are:
 # Desc: converts latex files to pdf
 # Arguments: 1 -> latex file
 # Date: Oct 2019
+
+# handling input parameters
+if [ -z $1 ]
+then 
+    echo "Please input a file name..."
+    echo "Script did not execute."
+    exit 
+fi
+
+# 
+if [[ $1 ==  *".tex"* ]]
+then 
+    echo "Please input the file name without the extension..."
+    echo "Script did not execute."
+    exit
+fi
 
 pdflatex $1.tex
 pdflatex $1.tex
@@ -299,6 +462,9 @@ rm -f *.snm
 rm -f *.toc
 
 # -f flag ignores nonexistent files and arguments
+
+# move pdf file to appropriate directory
+mv $1.pdf ../results
 **********************************************************************
 
 Testing CompileLaTeX.sh...
@@ -306,25 +472,14 @@ Testing CompileLaTeX.sh...
 Output (only first 500 characters): 
 
 **********************************************************************
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex)
- restricted \write18 enabled.
-entering extended mode
-(/usr/share/texlive/texmf-dist/tex/latex/tools/.tex
-LaTeX2e <2016/02/01>
-Babel <3.9q> and hyphenation patterns for 81 language(s) loaded.
-File ignored)
-*
-! Emergency stop.
-<*> .tex
-        
-!  ==> Fatal error occurred, no output PDF file produced!
-Transcript written on .log.
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (pre
+Please input a file name...
+Script did not execute.
+
 **********************************************************************
 
-Encountered error (or warning):
-bibtex: Need exactly one file argument.
-Try `bibtex --help' for more information.
+Code ran without errors
+
+Time consumed = 0.00819s
 
 ======================================================================
 Inspecting script file tiff2png.sh...
@@ -337,6 +492,16 @@ File contents are:
 # Desc: converts tiff files to png
 # Arguments: none
 # Date: Oct 2019
+
+# check if there are any tiff files in the current directory
+A=`find . -type f -name "*.tif" | wc -l` # the value of A will be 0 if there are no tiff files in the current directory
+
+if [ $A ]
+then
+	echo "No TIFF files detected..."
+	echo "Script did not execute."
+	exit
+fi
 
 for f in *.tif;
 	do
@@ -351,13 +516,14 @@ Testing tiff2png.sh...
 Output (only first 500 characters): 
 
 **********************************************************************
-Converting *.tif
+No TIFF files detected...
+Script did not execute.
 
 **********************************************************************
 
-Encountered error (or warning):
-convert: unable to open image `*.tif': No such file or directory @ error/blob.c/OpenBlob/2712.
-convert: no images defined `*.jpg' @ error/convert.c/ConvertImageCommand/3210.
+Code ran without errors
+
+Time consumed = 0.00780s
 
 ======================================================================
 Inspecting script file csvtospace.sh...
@@ -373,11 +539,21 @@ File contents are:
 # Arguments: 1 -> csv delimited file
 # Date: Oct 2019
 
-echo "Creating a space separated version of $1 ..."
-cat $1 | tr -s "," " " > $1.txt # tr -s replaces commas with spaces; even repeated commas are replaced by one space only
+# handling input parameters
+if [ -z $1 ]
+then 
+    echo "Please input a file name..."
+    echo "Script did not execute."
+    exit 
+fi
+
+filename=`basename $1`
+
+echo "Creating a space separated version of $filename..."
+cat $1 | tr -s "," " " > $filename.txt # tr -s replaces commas with spaces; even repeated commas are replaced by one space only
 echo "Done!"
 
-for file in $1.txt
+for file in $filename.txt
 do
     mv "$file" "$(basename "$file" .csv.txt).txt" # fixing the file extension from .csv.txt to just .txt
 done
@@ -389,14 +565,14 @@ Testing csvtospace.sh...
 Output (only first 500 characters): 
 
 **********************************************************************
-Creating a space separated version of  ...
-Done!
+Please input a file name...
+Script did not execute.
 
 **********************************************************************
 
 Code ran without errors
 
-Time consumed = 0.02180s
+Time consumed = 0.00824s
 
 ======================================================================
 Inspecting script file FirstExample.tex...
@@ -450,7 +626,7 @@ File contents are:
 
 msg1="Hello"
 msg2=$USER
-echo "$msg1 $msg2"
+echo -e "\n$msg1 $msg2"
 echo "Hello $USER"
 echo
 **********************************************************************
@@ -460,6 +636,7 @@ Testing MyExampleScript.sh...
 Output (only first 500 characters): 
 
 **********************************************************************
+
 Hello mhasoba
 Hello mhasoba
 
@@ -468,7 +645,7 @@ Hello mhasoba
 
 Code ran without errors
 
-Time consumed = 0.00474s
+Time consumed = 0.00440s
 
 ======================================================================
 Inspecting script file FirstBiblio.bib...
@@ -612,6 +789,14 @@ File contents are:
 # Arguments: 1 -> tab delimited file
 # Date: Oct 2019
 
+# handling input parameters
+if [ -z $1 ]
+then 
+    echo "Please input a file name..."
+    echo "Script did not execute." 
+    exit 
+fi
+
 echo "Creating a comma delimited version of $1 ..."
 cat $1 | tr -s "\t" "," >> $1.csv
 echo "Done!"
@@ -630,14 +815,14 @@ Testing tabtocsv.sh...
 Output (only first 500 characters): 
 
 **********************************************************************
-Creating a comma delimited version of  ...
-Done!
+Please input a file name...
+Script did not execute.
 
 **********************************************************************
 
 Code ran without errors
 
-Time consumed = 0.00770s
+Time consumed = 0.00726s
 
 ======================================================================
 Inspecting script file .txt.txt...
@@ -678,19 +863,112 @@ This is a shell script!
 
 Code ran without errors
 
-Time consumed = 0.00299s
+Time consumed = 0.00460s
 
 ======================================================================
 ======================================================================
 Finished running scripts
 
-Ran into 5 errors
+Ran into 0 errors
+
+======================================================================
+Assessing WEEK10...
+
+Found the following directories: code, sandbox, data, results
+
+Found the following files: README.md
+
+Checking for readme file in weekly directory...
+
+Found README in parent directory, named: README.md
+
+Printing contents of README.md:
+**********************************************************************
+# Week 10: Biological Data Structures and C
+
+* The tenth week introduced basics of procedural programming in C and applications related to biological data structures such as (phylogenetic) trees and other networks.
+
+* The **Week10** directory includes the following subdirectories: *code*, *data*, *results*, and *sandbox*.
+    - code - includes all the Week 10 in-class scripts
+    - data - empty; can include data needed for some C scripts
+    - results - essentially an empty directory, but includes a .gitignore file (since completely empty directories cannnot be pushed to git)
+    - sandbox - similar to a recycle bin; disposing files that are not needed for assessment, but might still be useful for the author if and when needed
+
+## Authors
+
+Jedi (in training): Hovig Artinian
+
+Academic email: ha819@ic.ac.uk
+
+Personal email: artinianhovig@gmail.com
+
+## License
+
+None
+
+## Acknowledgements
+
+Tenth week of Jedi training completed!
+**********************************************************************
+
+Found following files in results directory: .gitignore...
+
+Found 1 code files: comp.run.sh
+
+Found the following extra files: tree.o, tree.h, node.h, tree.c
+0.5 pt deducted per extra file
+
+Current Points = 97.5
+
+======================================================================
+Testing script/code files...
+
+======================================================================
+Inspecting script file comp.run.sh...
+
+File contents are:
+**********************************************************************
+#!/bin/bash
+
+# compiles C program:
+gcc -Wall $1
+error=$?
+
+if [ $error != 0 ]
+then
+    echo "Fix errors to obtain output"
+
+else
+    # run the program:
+    ./a.out
+
+fi
+**********************************************************************
+
+Testing comp.run.sh...
+
+Output (only first 500 characters): 
+
+**********************************************************************
+Fix errors to obtain output
+
+**********************************************************************
+
+Encountered error (or warning):
+gcc: fatal error: no input files
+compilation terminated.
+
+======================================================================
+======================================================================
+Finished running scripts
+
+Ran into 1 errors
 
 ======================================================================
 ======================================================================
 
 FINISHED WEEKLY ASSESSMENT
 
-Current Points for the Week = 99.5
+Current Points for the Week = 97.5
 
 NOTE THAT THESE ARE POINTS, NOT MARKS FOR THE WEEK!
