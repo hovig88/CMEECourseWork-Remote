@@ -9,7 +9,6 @@ __license__ = 'None'
 
 ## imports ##
 import networkx as nx
-import scipy as sc
 import numpy as np
 import matplotlib.pyplot as p
 from matplotlib.lines import Line2D
@@ -25,16 +24,16 @@ def csvToList(filename):
 ## EDGES ##
 links = np.array(csvToList('../data/QMEE_Net_Mat_edges.csv'))
 links_m = np.array(links[1:, :], dtype='i4')
-links_mat = sc.matrix(links_m) # convert to matrix to be able to calculate the adjacency list
+links_mat = np.matrix(links_m) # convert to matrix to be able to calculate the adjacency list
 
 # calculating the adjacency list
-AdjList_temp = sc.nonzero(links_mat)
-AdjList = sc.array([tuple(i) for i in sc.transpose(AdjList_temp)])
+AdjList_temp = np.nonzero(links_mat)
+AdjList = np.array([tuple(i) for i in np.transpose(AdjList_temp)])
 
-ids = sc.unique(AdjList)
+ids = np.unique(AdjList)
 
 ## EDGE WEIGHTS ##
-weights = sc.array([links_mat[i,j] for i,j in AdjList]) # extracts the non-zero values in the matrix
+weights = np.array([links_mat[i,j] for i,j in AdjList]) # extracts the non-zero values in the matrix
 width = 1 + weights / 10 # setting edge width based on weight (PhD Students)
 
 ## NODES ##
